@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Transaction extends Model
 {
     use HasFactory;
+
+    public const STATUSES = [
+        'OP', // open
+        'PN', // pending
+        'CP', // complete
+        'RF', // refund
+    ];
 }
