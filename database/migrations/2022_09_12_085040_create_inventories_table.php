@@ -17,7 +17,6 @@ return new class extends Migration
             $table->id();
             $table->string('name', 255);
             $table->longText('description')->nullable();
-            $table->foreignId('unit_id');
             $table->string('unit', 25)->nullable();
 
             // Default Columns
