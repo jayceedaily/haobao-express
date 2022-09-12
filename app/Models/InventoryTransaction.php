@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class InventoryTransaction extends Model
 {
     use HasFactory;
+
+    public const DIRECTION = [
+        'IN',
+        'OUT'
+    ];
 }
