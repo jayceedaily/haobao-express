@@ -1,34 +1,51 @@
 <template>
-  <div class="grid grid-cols-3 gap-3 p-10">
+  <div class="w-full bg-yellow-500 py-10 flex justify-between px-5">
+    <!-- <div class="text-3xl font-bold flex gap-3">
+      <span>Hao Bao Express</span> <ChevronDoubleRightIcon class="w-8" />
+    </div>
+    <div class="flex content-center">
+      <div>
+        <ShoppingBagIcon class="w-8" />
+      </div>
+      <div class="text-3xl font-bold ml-5">0</div>
+    </div> -->
+  </div>
+  <!-- {{ categories }} -->
+  <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-3 p-10">
     <div
       v-for="(product, index) in products"
       :key="index"
-      class="border rounded-lg"
+      class="border rounded-lg hover:shadow-lg cursor-pointer"
     >
       <div class="p-5">
-        <p>
-          {{ product.name }}
-          <span v-if="product.variants && product.variants.length"
-            >({{ product.variants.length }} Variants)</span
-          >
+        <div>
+          <p class="text-xl">
+            {{ product.name }}
+          </p>
 
-          <br />
-          <strong> P{{ priceResolver(product)[0] }} </strong>
+          <strong> ₱{{ priceResolver(product)[0] }} </strong>
           <strong v-if="priceResolver(product)[1]">
-            - P{{ priceResolver(product)[1] }}
+            - ₱{{ priceResolver(product)[1] }}
           </strong>
-        </p>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import { ref } from "@vue/reactivity";
+import { ref, computed } from "@vue/reactivity";
+import {
+  ShoppingBagIcon,
+  ChevronDoubleRightIcon,
+} from "@heroicons/vue/24/outline";
 
 export default {
   name: "App",
-
+  components: {
+    ShoppingBagIcon,
+    ChevronDoubleRightIcon,
+  },
   setup() {
     const addOns = ref([
       {
@@ -85,6 +102,7 @@ export default {
       },
       {
         name: "Fried Chicken",
+        category: "Platt",
         variants: [
           {
             name: "4PC Fried Chicken - Classic",
@@ -239,6 +257,18 @@ export default {
       },
     ]);
 
+    const categories = computed(() => {
+      let _categories = [];
+
+      products.value.forEach((_product) => {
+        if (!_categories.includes(_product.category)) {
+          _categories.push(_product.category);
+        }
+      });
+
+      return _categories;
+    });
+
     const priceResolver = (product) => {
       let price = product.price ? [product.price] : [];
 
@@ -262,6 +292,7 @@ export default {
     return {
       products,
       priceResolver,
+      categories,
     };
   },
 };
