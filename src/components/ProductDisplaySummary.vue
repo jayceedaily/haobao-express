@@ -8,11 +8,11 @@
         <div class="text-xl sm:w-full">
           {{ product.name }}
         </div>
-        <div class="w-full text-xl">
-          <strong
+        <div class="w-full">
+          <strong class="text-xl"
             ><span class="text-sm">₱</span>{{ priceResolver(product)[0] }}
           </strong>
-          <strong v-if="priceResolver(product)[1]">
+          <strong v-if="priceResolver(product)[1]" class="text-lg">
             - <span class="text-sm">₱</span>{{ priceResolver(product)[1] }}
           </strong>
         </div>
