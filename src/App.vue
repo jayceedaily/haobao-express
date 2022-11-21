@@ -2,11 +2,11 @@
   <div class="w-full bg-yellow-500 py-10 flex justify-between px-5">
     <img src="./assets/haobao.png" alt="" class="w-24 mx-auto" />
   </div>
-  <div class="p-10 flex flex-col gap-10 container mx-auto">
+  <div class="p-10 flex flex-col gap-10 container mx-auto w-1/3">
     <div v-for="(category, index) in categories" :key="index">
       <h3 class="text-lg font-bold mb-3 uppercase">{{ category }}</h3>
       <div
-        class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-3 items-start"
+        class="grid grid-cols-1 gap-3 items-start"
       >
         <product-display-summary
           v-for="(product, index) in productByCategory(category)"
@@ -58,21 +58,25 @@ export default {
           name: "Sweet & Sour Pork",
           category: "Add-Ons",
           price: 85,
+          tags: ["NEW", "RECOMMENDED"],
         },
         {
           name: "Szechuan Pork",
           category: "Add-Ons",
           price: 85,
+          tags: ["NEW"],
         },
         {
           name: "Wonton Dumplings",
           category: "Add-Ons",
           price: 80,
+          tags: ["BEST_SELLER"],
         },
         {
           name: "Shanghai Rolls - 6Pcs",
           category: "Add-Ons",
           price: 80,
+          tags: ["BEST_SELLER"],
         },
         {
           name: "Fried Chicken - 1Pc",
@@ -93,6 +97,7 @@ export default {
         name: "Beef Wonton Mami",
         price: 260,
         category: "Specialty",
+        tags: ["BEST_SELLER", "RECOMMENDED"],
       },
       {
         id: 2,
@@ -119,6 +124,7 @@ export default {
       {
         name: "Fried Chicken",
         category: "Familiy Size Entree",
+        tags: ["BEST_SELLER"],
         variants: [
           {
             name: "4PC Fried Chicken - Classic",
@@ -135,26 +141,32 @@ export default {
           {
             name: "4PC Fried Chicken - Hao Bao Original",
             price: 260,
+            tags: ["BEST_SELLER", "RECOMMENDED"],
           },
           {
             name: "6PC Fried Chicken - Hao Bao Original",
             price: 390,
+            tags: ["BEST_SELLER", "RECOMMENDED"],
           },
           {
             name: "8PC Fried Chicken - Hao Bao Original",
             price: 520,
+            tags: ["BEST_SELLER", "RECOMMENDED"],
           },
           {
             name: "4PC Fried Chicken - Orange Chicken",
             price: 260,
+            tags: ["BEST_SELLER"],
           },
           {
             name: "6PC Fried Chicken - Orange Chicken",
             price: 390,
+            tags: ["BEST_SELLER"],
           },
           {
             name: "8PC Fried Chicken - Orange Chicken",
             price: 520,
+            tags: ["BEST_SELLER"],
           },
           {
             name: "4PC Fried Chicken - Honey Garlic",
@@ -171,26 +183,32 @@ export default {
           {
             name: "4PC Fried Chicken - Soy Garlic",
             price: 260,
+            tags: ["NEW"],
           },
           {
             name: "6PC Fried Chicken - Soy Garlic",
             price: 390,
+            tags: ["NEW"],
           },
           {
             name: "8PC Fried Chicken - Soy Garlic",
             price: 520,
+            tags: ["NEW"],
           },
           {
             name: "4PC Fried Chicken - Szechuan",
             price: 260,
+            tags: ["NEW"],
           },
           {
             name: "6PC Fried Chicken - Szechuan",
             price: 390,
+            tags: ["NEW"],
           },
           {
             name: "8PC Fried Chicken - Szechuan",
             price: 520,
+            tags: ["NEW"],
           },
         ],
       },
@@ -198,16 +216,19 @@ export default {
         name: "Beef Brocolli",
         price: 285,
         category: "Familiy Size Entree",
+        tags: ["NEW"],
       },
       {
         name: "Sweet & Sour Pork",
         price: 245,
         category: "Familiy Size Entree",
+        tags: ["NEW", "RECOMMENDED"],
       },
       {
         name: "Szechuan Pork",
         price: 245,
         category: "Familiy Size Entree",
+        tags: ["NEW"],
       },
       {
         name: "Spring Rolls",
@@ -218,11 +239,13 @@ export default {
         name: "Shanghai Rolls - 15Pcs",
         price: 195,
         category: "Familiy Size Entree",
+        tags: ["BEST_SELLER"],
       },
       {
         name: "Stir Fried Bok Choy",
         price: 195,
         category: "Familiy Size Entree",
+        tags: ["RECOMMENDED"],
       },
       {
         name: "Soy Garlic Spinach",
@@ -239,6 +262,7 @@ export default {
         name: "Yang Chow - Family Platter",
         price: 315,
         category: "Fried Rice - Family Platter",
+        tags: ["BEST_SELLER", "RECOMMENDED"],
       },
       {
         name: "Pork Chow Fan - Family Platter",
@@ -249,11 +273,13 @@ export default {
         name: "Hao Bao Egg Fried Rice - Family Platter",
         price: 360,
         category: "Fried Rice - Family Platter",
+        tags: ["BEST_SELLER"],
       },
       {
         name: "Hao Bao Egg Fried Rice",
         price: 85,
         category: "Rice Bowls",
+        tags: ["RECOMMENDED"],
         variants: addOns.modify("Hao Bao Egg Fried Rice", 85),
       },
       {
@@ -266,6 +292,7 @@ export default {
         name: "Yang Chow",
         price: 110,
         category: "Rice Bowls",
+        tags: ["RECOMMENDED", "BEST_SELLER"],
         variants: addOns.modify("Yang Chow", 110),
       },
       {
@@ -289,6 +316,7 @@ export default {
         name: "Pork Chow Mein - Family Platter",
         price: 315,
         category: "Chow Mein - Family Platter",
+        tags: ["RECOMMENDED", "BEST_SELLER"],
       },
       {
         name: "Vegetable Chow Mein - Family Platter",
@@ -312,6 +340,7 @@ export default {
         name: "Pork Chow Mein",
         price: 105,
         category: "Chow Mein Bowls",
+        tags: ["RECOMMENDED", "BEST_SELLER"],
         variants: addOns.modify("Pork Chow Mein", 105),
       },
       {
@@ -330,6 +359,7 @@ export default {
         name: "Premium Leche Flan",
         price: 85,
         category: "Others",
+        tags: ["RECOMMENDED"],
       },
     ]);
 

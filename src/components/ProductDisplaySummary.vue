@@ -1,33 +1,55 @@
 <template>
   <div
-    class="border rounded-lg hover:shadow-lg cursor-pointer"
+    class="border rounded-lg hover:shadow-lg cursor-pointer h-30"
     @click="showVariantHandler"
   >
     <div class="p-5">
       <div class="flex flex-wrap">
-        <div class="text-xl lg:w-2/3 sm:w-full">
+        <div class="text-xl sm:w-full">
           {{ product.name }}
         </div>
-        <div class="lg:w-1/3 w-full lg:text-right">
-          <strong> ₱{{ priceResolver(product)[0] }} </strong>
+        <div class="w-full text-xl">
+          <strong
+            ><span class="text-sm">₱</span>{{ priceResolver(product)[0] }}
+          </strong>
           <strong v-if="priceResolver(product)[1]">
-            - ₱{{ priceResolver(product)[1] }}
+            - <span class="text-sm">₱</span>{{ priceResolver(product)[1] }}
           </strong>
         </div>
       </div>
       <div class="flex gap-2 flex-wrap">
-        <span class="text-xs font-medium px-2 py-1 bg-red-100 rounded">
-          🔥 Best Seller</span
-        >
-        <span class="text-xs font-medium px-2 py-1 bg-yellow-100 rounded">
-          ✨ Highly Recommended</span
-        >
-		 <span class="text-xs font-medium px-2 py-1 bg-green-100 rounded">
-          🥬 Low Calories</span
-        >
-		<span class="text-xs font-medium px-2 py-1 bg-pink-100 rounded">
-          🥩 High Protein</span
-        >
+        <template v-for="(tag, index) in product.tags" :key="index">
+          <span
+            v-if="tag == 'BEST_SELLER'"
+            class="text-xs font-medium px-2 py-1 bg-red-100 rounded"
+          >
+            🔥 Best Seller</span
+          >
+          <span
+            v-if="tag == 'RECOMMENDED'"
+            class="text-xs font-medium px-2 py-1 bg-yellow-100 rounded"
+          >
+            ✨ Recommended</span
+          >
+          <span
+            v-if="tag == 'LOW_CALORIES'"
+            class="text-xs font-medium px-2 py-1 bg-green-100 rounded"
+          >
+            🥬 Low Calories</span
+          >
+          <span
+            v-if="tag == 'HIGH_PROTEIN'"
+            class="text-xs font-medium px-2 py-1 bg-pink-100 rounded"
+          >
+            🥩 High Protein</span
+          >
+          <span
+            v-if="tag == 'NEW'"
+            class="text-xs font-medium px-2 py-1 bg-green-100 rounded"
+          >
+            ⭐ NEW</span
+          >
+        </template>
       </div>
 
       <div v-if="showVariant" class="mt-5">
