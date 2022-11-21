@@ -20,7 +20,7 @@
         <div class="flex flex-col gap-3 flex-start">
           <hr />
 
-          <product-display-summary :product="{ ...product, variants: [] }" />
+          <product-display-summary v-if="product.price" :product="{ ...product, variants: [] }" />
 
           <product-display-summary
             v-for="(variant, index) in product.variants"
