@@ -46,6 +46,7 @@ export default {
 
         this.value.forEach((addOn) => {
           newValue.push({
+            ...addOn,
             name: name + " w/ " + addOn.name,
             price: price + addOn.price,
           });
