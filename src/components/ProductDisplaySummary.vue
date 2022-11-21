@@ -1,6 +1,6 @@
 <template>
   <div class="border rounded-xl hover:shadow-lg cursor-pointer h-30">
-    <div class="p-5 flex gap-3 flex-col sm:flex-row sm:justify-between">
+    <div class="p-5 flex gap-3 justify-between">
       <div>
         <div class="flex flex-wrap">
           <div class="text-xl sm:w-full">
@@ -18,10 +18,10 @@
         <div class="flex gap-2 flex-wrap">
           <template v-for="(tag, index) in product.tags" :key="index">
             <span
-              v-if="tag == 'BEST_SELLER'"
+              v-if="tag == 'POPULAR'"
               class="text-xs font-medium px-2 py-1 bg-red-100 rounded"
             >
-              🔥 Best Seller</span
+              🔥 Popular</span
             >
             <span
               v-if="tag == 'RECOMMENDED'"
@@ -59,20 +59,22 @@
         <div>
           <button
             @click="showVariantHandler"
-            class="flex items-center gap-3 px-5 py-3 font-bold bg-black text-white rounded-full"
+            class="flex items-center gap-3 p-3 font-bold bg-gray-200 text-gray-400 rounded-full"
           >
-            <Squares2X2Icon class="w-5" />
-            <div class="text-sm">View Option</div>
+            <!-- <Squares2X2Icon class="w-5" /> -->
+            <HeartIcon class="w-5" />
+
+            <!-- <div class="text-sm">View Option</div> -->
           </button>
         </div>
       </div>
       <div v-else class="flex justify-end">
         <div>
           <button
-            class="flex items-center gap-3 px-5 py-3 font-bold bg-black text-white rounded-full"
+            class="flex items-center gap-3 p-3 font-bold bg-gray-200 text-gray-400 rounded-full"
           >
-            <ShoppingBagIcon class="w-5" />
-            <div class="text-sm">Add to Bag</div>
+            <HeartIcon class="w-5" />
+            <!-- <div class="text-sm">Add to Bag</div> -->
           </button>
         </div>
       </div>
@@ -99,13 +101,18 @@
 <script>
 import { ref } from "vue";
 import { ChevronDownIcon } from "@heroicons/vue/24/outline";
-import { ShoppingBagIcon, Squares2X2Icon } from "@heroicons/vue/24/solid";
+import {
+  ShoppingBagIcon,
+  Squares2X2Icon,
+  HeartIcon,
+} from "@heroicons/vue/24/solid";
 
 export default {
   components: {
     ChevronDownIcon,
     ShoppingBagIcon,
     Squares2X2Icon,
+    HeartIcon,
   },
   props: {
     product: {
