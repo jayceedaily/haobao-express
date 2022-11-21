@@ -1,6 +1,6 @@
 <template>
   <div
-    class="border rounded-lg hover:shadow-lg cursor-pointer h-30"
+    class="border rounded-xl hover:shadow-lg cursor-pointer h-30"
     @click="showVariantHandler"
   >
     <div class="p-5">
