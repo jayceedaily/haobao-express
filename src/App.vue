@@ -274,6 +274,28 @@ export default {
         category: "Rice Bowls",
         variants: addOns.modify("Shrimp Fried Rice", 125),
       },
+
+      {
+        name: "Shrimp Chow Mein - Family Platter",
+        price: 390,
+        category: "Chow Mein - Family Platter",
+      },
+      {
+        name: "Beef Chow Mein - Family Platter",
+        price: 345,
+        category: "Chow Mein - Family Platter",
+      },
+      {
+        name: "Pork Chow Mein - Family Platter",
+        price: 315,
+        category: "Chow Mein - Family Platter",
+      },
+      {
+        name: "Vegetable Chow Mein - Family Platter",
+        price: 315,
+        category: "Chow Mein - Family Platter",
+      },
+
       {
         name: "Shrimp Chow Mein",
         price: 130,
