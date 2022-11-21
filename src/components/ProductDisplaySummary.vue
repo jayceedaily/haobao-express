@@ -51,23 +51,17 @@
           >
         </template>
       </div>
+    </div>
+  </div>
+  <div v-if="showVariant" class="mt-5">
+    <div class="flex flex-col gap-3 flex-start pl-5 border-l-yellow-500 border-l-2">
+    
 
-      <div v-if="showVariant" class="mt-5">
-        <div class="flex flex-col gap-3 flex-start">
-          <hr />
-
-          <product-display-summary
-            v-if="product.price"
-            :product="{ ...product, variants: [] }"
-          />
-
-          <product-display-summary
-            v-for="(variant, index) in product.variants"
-            :key="index"
-            :product="variant"
-          />
-        </div>
-      </div>
+      <product-display-summary
+        v-for="(variant, index) in product.variants"
+        :key="index"
+        :product="variant"
+      />
     </div>
   </div>
 </template>
