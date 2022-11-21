@@ -1,6 +1,6 @@
 <template>
   <div class="border rounded-xl hover:shadow-lg cursor-pointer h-30">
-    <div class="p-5 flex justify-between">
+    <div class="p-5 flex gap-3 flex-col sm:flex-row sm:justify-between">
       <div>
         <div class="flex flex-wrap">
           <div class="text-xl sm:w-full">
@@ -50,23 +50,31 @@
           </template>
         </div>
       </div>
-      <div v-if="product.variants && product.variants.length">
+
+      <div
+        v-if="product.variants && product.variants.length"
+        class="flex justify-end"
+      >
         <!-- <ChevronDownIcon class="w-5 text-gray-500" /> -->
-        <button
-          @click="showVariantHandler"
-          class="flex items-center gap-3 px-5 py-3 font-bold bg-black text-white rounded-full"
-        >
-          <Squares2X2Icon class="w-5" />
-          <div class="text-sm">View Option</div>
-        </button>
+        <div>
+          <button
+            @click="showVariantHandler"
+            class="flex items-center gap-3 px-5 py-3 font-bold bg-black text-white rounded-full"
+          >
+            <Squares2X2Icon class="w-5" />
+            <div class="text-sm">View Option</div>
+          </button>
+        </div>
       </div>
-      <div v-else class="">
-        <button
-          class="flex items-center gap-3 px-5 py-3 font-bold bg-black text-white rounded-full"
-        >
-          <ShoppingBagIcon class="w-5" />
-          <div class="text-sm">Add to Bag</div>
-        </button>
+      <div v-else class="flex justify-end">
+        <div>
+          <button
+            class="flex items-center gap-3 px-5 py-3 font-bold bg-black text-white rounded-full"
+          >
+            <ShoppingBagIcon class="w-5" />
+            <div class="text-sm">Add to Bag</div>
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -74,7 +82,10 @@
     <div
       class="flex flex-col gap-3 flex-start pl-5 border-l-yellow-500 border-l-2"
     >
-      <product-display-summary v-if="product.price" :product="{ ...product, variants: [] }" />
+      <product-display-summary
+        v-if="product.price"
+        :product="{ ...product, variants: [] }"
+      />
 
       <product-display-summary
         v-for="(variant, index) in product.variants"
