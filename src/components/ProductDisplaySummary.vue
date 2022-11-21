@@ -1,55 +1,72 @@
 <template>
-  <div
-    class="border rounded-xl hover:shadow-lg cursor-pointer h-30"
-    @click="showVariantHandler"
-  >
-    <div class="p-5">
-      <div class="flex flex-wrap">
-        <div class="text-xl sm:w-full">
-          {{ product.name }}
+  <div class="border rounded-xl hover:shadow-lg cursor-pointer h-30">
+    <div class="p-5 flex justify-between">
+      <div>
+        <div class="flex flex-wrap">
+          <div class="text-xl sm:w-full">
+            {{ product.name }}
+          </div>
+          <div class="w-full">
+            <strong class="text-xl"
+              ><span class="text-sm">₱</span>{{ priceResolver(product)[0] }}
+            </strong>
+            <strong v-if="priceResolver(product)[1]" class="text-lg">
+              - <span class="text-sm">₱</span>{{ priceResolver(product)[1] }}
+            </strong>
+          </div>
         </div>
-        <div class="w-full">
-          <strong class="text-xl"
-            ><span class="text-sm">₱</span>{{ priceResolver(product)[0] }}
-          </strong>
-          <strong v-if="priceResolver(product)[1]" class="text-lg">
-            - <span class="text-sm">₱</span>{{ priceResolver(product)[1] }}
-          </strong>
+        <div class="flex gap-2 flex-wrap">
+          <template v-for="(tag, index) in product.tags" :key="index">
+            <span
+              v-if="tag == 'BEST_SELLER'"
+              class="text-xs font-medium px-2 py-1 bg-red-100 rounded"
+            >
+              🔥 Best Seller</span
+            >
+            <span
+              v-if="tag == 'RECOMMENDED'"
+              class="text-xs font-medium px-2 py-1 bg-yellow-100 rounded"
+            >
+              ✨ Recommended</span
+            >
+            <span
+              v-if="tag == 'LOW_CALORIES'"
+              class="text-xs font-medium px-2 py-1 bg-green-100 rounded"
+            >
+              🥬 Low Calories</span
+            >
+            <span
+              v-if="tag == 'HIGH_PROTEIN'"
+              class="text-xs font-medium px-2 py-1 bg-pink-100 rounded"
+            >
+              🥩 High Protein</span
+            >
+            <span
+              v-if="tag == 'NEW'"
+              class="text-xs font-medium px-2 py-1 bg-green-100 rounded"
+            >
+              ⭐ NEW</span
+            >
+          </template>
         </div>
       </div>
-      <div class="flex gap-2 flex-wrap">
-        <template v-for="(tag, index) in product.tags" :key="index">
-          <span
-            v-if="tag == 'BEST_SELLER'"
-            class="text-xs font-medium px-2 py-1 bg-red-100 rounded"
-          >
-            🔥 Best Seller</span
-          >
-          <span
-            v-if="tag == 'RECOMMENDED'"
-            class="text-xs font-medium px-2 py-1 bg-yellow-100 rounded"
-          >
-            ✨ Recommended</span
-          >
-          <span
-            v-if="tag == 'LOW_CALORIES'"
-            class="text-xs font-medium px-2 py-1 bg-green-100 rounded"
-          >
-            🥬 Low Calories</span
-          >
-          <span
-            v-if="tag == 'HIGH_PROTEIN'"
-            class="text-xs font-medium px-2 py-1 bg-pink-100 rounded"
-          >
-            🥩 High Protein</span
-          >
-          <span
-            v-if="tag == 'NEW'"
-            class="text-xs font-medium px-2 py-1 bg-green-100 rounded"
-          >
-            ⭐ NEW</span
-          >
-        </template>
+      <div v-if="product.variants && product.variants.length">
+        <!-- <ChevronDownIcon class="w-5 text-gray-500" /> -->
+        <button
+          @click="showVariantHandler"
+          class="flex items-center gap-3 px-5 py-3 font-bold bg-black text-white rounded-full"
+        >
+          <Squares2X2Icon class="w-5" />
+          <div class="text-sm">View Option</div>
+        </button>
+      </div>
+      <div v-else class="">
+        <button
+          class="flex items-center gap-3 px-5 py-3 font-bold bg-black text-white rounded-full"
+        >
+          <ShoppingBagIcon class="w-5" />
+          <div class="text-sm">Add to Bag</div>
+        </button>
       </div>
     </div>
   </div>
@@ -57,7 +74,7 @@
     <div
       class="flex flex-col gap-3 flex-start pl-5 border-l-yellow-500 border-l-2"
     >
-      <product-display-summary :product="{ ...product, variants: [] }" />
+      <product-display-summary v-if="product.price" :product="{ ...product, variants: [] }" />
 
       <product-display-summary
         v-for="(variant, index) in product.variants"
@@ -70,7 +87,15 @@
 
 <script>
 import { ref } from "vue";
+import { ChevronDownIcon } from "@heroicons/vue/24/outline";
+import { ShoppingBagIcon, Squares2X2Icon } from "@heroicons/vue/24/solid";
+
 export default {
+  components: {
+    ChevronDownIcon,
+    ShoppingBagIcon,
+    Squares2X2Icon,
+  },
   props: {
     product: {
       type: Object,

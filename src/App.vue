@@ -2,7 +2,7 @@
   <div class="w-full bg-yellow-500 py-10 flex justify-between px-5">
     <img src="./assets/haobao.png" alt="" class="w-24 mx-auto" />
   </div>
-  <div class="p-3 flex flex-col gap-10 container mx-auto lg:w-1/3 md:w-2/3" >
+  <div class="p-3 flex flex-col gap-10 container mx-auto lg:w-2/3 md:w-3/4 xl:w-1/3" >
     <div v-for="(category, index) in categories" :key="index">
       <h3 class="text-lg font-bold mb-3 uppercase">{{ category }}</h3>
       <div
