@@ -1,5 +1,6 @@
 import { createApp } from "vue";
 import "./style.css";
+
 import App from "./App.vue";
 Array.prototype.max = function () {
   return Math.max.apply(null, this);
