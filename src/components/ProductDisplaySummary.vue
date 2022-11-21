@@ -15,12 +15,29 @@
           </strong>
         </div>
       </div>
+      <div class="flex gap-2 flex-wrap">
+        <span class="text-xs font-medium px-2 py-1 bg-red-100 rounded">
+          🔥 Best Seller</span
+        >
+        <span class="text-xs font-medium px-2 py-1 bg-yellow-100 rounded">
+          ✨ Highly Recommended</span
+        >
+		 <span class="text-xs font-medium px-2 py-1 bg-green-100 rounded">
+          🥬 Low Calories</span
+        >
+		<span class="text-xs font-medium px-2 py-1 bg-pink-100 rounded">
+          🥩 High Protein</span
+        >
+      </div>
 
       <div v-if="showVariant" class="mt-5">
         <div class="flex flex-col gap-3 flex-start">
           <hr />
 
-          <product-display-summary v-if="product.price" :product="{ ...product, variants: [] }" />
+          <product-display-summary
+            v-if="product.price"
+            :product="{ ...product, variants: [] }"
+          />
 
           <product-display-summary
             v-for="(variant, index) in product.variants"
