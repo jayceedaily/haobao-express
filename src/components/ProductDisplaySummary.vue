@@ -1,5 +1,14 @@
 <template>
   <div class="border rounded-xl hover:shadow-lg cursor-pointer h-30">
+    <template v-if="product.images">
+      <img
+        class="rounded-t-xl"
+        v-for="(image, index) in product.images"
+        :src="image"
+        alt=""
+        :key="index"
+      />
+    </template>
     <div class="p-5 flex gap-3 lg:justify-between flex-col sm:flex-row">
       <div>
         <div class="flex flex-wrap">
