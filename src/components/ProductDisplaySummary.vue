@@ -1,6 +1,6 @@
 <template>
   <div class="border rounded-xl hover:shadow-lg cursor-pointer h-30">
-    <div class="p-5 flex gap-3 justify-between">
+    <div class="p-5 flex gap-3 lg:justify-between flex-col sm:flex-row">
       <div>
         <div class="flex flex-wrap">
           <div class="text-xl sm:w-full">
@@ -59,25 +59,25 @@
         <div>
           <button
             @click="showVariantHandler"
-            class="flex items-center gap-3 p-3 font-bold bg-gray-200 text-gray-400 rounded-full"
+            class="flex items-center gap-3 p-3 font-bold bg-black text-white rounded-full"
           >
             <!-- <Squares2X2Icon class="w-5" /> -->
-            <HeartIcon class="w-5" />
+            <!-- <HeartIcon class="w-5" /> -->
 
-            <!-- <div class="text-sm">View Option</div> -->
+            <div class="text-sm">View Option</div>
           </button>
         </div>
       </div>
-      <div v-else class="flex justify-end">
+      <!-- <div v-else class="flex justify-end">
         <div>
           <button
             class="flex items-center gap-3 p-3 font-bold bg-gray-200 text-gray-400 rounded-full"
           >
             <HeartIcon class="w-5" />
-            <!-- <div class="text-sm">Add to Bag</div> -->
+            <div class="text-sm">Add to Bag</div>
           </button>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
   <div v-if="showVariant" class="mt-5">
