@@ -56,7 +56,7 @@ export const products = ref([
   {
     id: 1,
     name: "Beef Wonton Mami",
-    images: ["./src/assets/beef-wonton.jpg"],
+    images: ["../assets/beef-wonton.jpg"],
     price: 260,
     category: "Specialty",
     tags: ["POPULAR", "RECOMMENDED"],
@@ -88,7 +88,7 @@ export const products = ref([
   {
     id: 6,
     name: "Fried Chicken",
-    images: ["./src/assets/chicken.jpg"],
+    images: ["../assets/chicken.jpg"],
     category: "Family Size Entree",
     tags: ["POPULAR"],
     variants: [
