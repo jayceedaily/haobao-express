@@ -1,10 +1,12 @@
 <template>
   <div class="border rounded-xl hover:shadow-lg cursor-pointer h-30">
     <template v-if="product.images">
+      <!-- <img src="../assets/beef-wonton.jpg" alt="" /> -->
+
       <img
         class="rounded-t-xl"
         v-for="(image, index) in product.images"
-        :src="image"
+        :src="getImgUrl(image)"
         alt=""
         :key="index"
       />
@@ -108,7 +110,7 @@
 </template>
 
 <script>
-import { ref } from "vue";
+import { defineAsyncComponent, ref } from "vue";
 import { ChevronDownIcon } from "@heroicons/vue/24/outline";
 import {
   ShoppingBagIcon,
@@ -156,10 +158,17 @@ export default {
       }
     };
 
+    const getImgUrl = (src) => {
+      return new URL(src, import.meta.url).href
+      // return await import(src);
+
+    };
+
     return {
       showVariant,
       priceResolver,
       showVariantHandler,
+      getImgUrl,
     };
   },
 };
