@@ -1,5 +1,5 @@
 <template>
-  <div class="border rounded-xl hover:shadow-lg cursor-pointer h-30">
+  <a :href="'/haobao-auf/' + product.id" class="border rounded-xl hover:shadow-lg cursor-pointer h-30">
     <template v-if="product.images">
       <!-- <img src="../assets/beef-wonton.jpg" alt="" /> -->
 
@@ -90,7 +90,7 @@
         </div>
       </div> -->
     </div>
-  </div>
+  </a>
   <div v-if="showVariant" class="mt-5">
     <div
       class="flex flex-col gap-3 flex-start pl-5 border-l-yellow-500 border-l-2"
