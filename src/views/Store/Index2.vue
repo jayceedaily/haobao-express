@@ -1,4 +1,7 @@
 <template>
+
+<div class="container mx-auto lg:w-1/3">
+
   <nav class="sticky top-0 z-10">
     <div class="bg-yellow-500 justify-between flex">
       <div class="bg-yellow-400 p-4">
@@ -73,6 +76,7 @@
     </div>
     <!-- STORE ITEMS END -->
   </div>
+</div>
 </template>
 
 <script>
