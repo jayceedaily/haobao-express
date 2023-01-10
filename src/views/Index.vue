@@ -1,6 +1,6 @@
 <template>
   <div class="w-full bg-yellow-500 py-10 flex justify-between px-5">
-    <img src="./assets/haobao.png" alt="" class="w-24 mx-auto" />
+    <!-- <img src="./assets/haobao.png" alt="" class="w-24 mx-auto" /> -->
 
   </div>
   <div
