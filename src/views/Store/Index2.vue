@@ -16,13 +16,7 @@
         <h1 class="font-bold text-2xl">Hao Bao Wonton Noodles</h1>
 
         <div class="flex gap-3">
-          <!-- <div class="text-yellow-500 flex">
-          <StarIcon class="w-4" />
-          <StarIcon class="w-4" />
-          <StarIcon class="w-4" />
-          <StarIcon class="w-4" />
-          <StarIconOutline class="w-4" />
-        </div> -->
+
           <p class="text-gray-400">2.4km away</p>
 
           <p class="font-medium flex gap-1">
@@ -61,7 +55,7 @@
       </div>
       <!-- FILTER END -->
       <!-- STORE ITEMS -->
-      <div class="grid grid-cols-2 gap-3">
+      <div class="grid grid-cols-2 gap-3 pb-20">
         <food-card v-for="item in filteredItems" :item="item" :key="item.id" />
       </div>
       <!-- STORE ITEMS END -->
