@@ -828,6 +828,8 @@ export default {
       {
         id: 25,
         name: "Shanghai Rolls",
+        image:
+          "https://sweetsimplevegan.com/wp-content/uploads/2020/09/Vegan-Lumpiang-Shanghai-Filipino-Spring-Rolls-Sweet-Simple-Vegan-4.jpg",
         description: null,
         price: 195,
         cost: null,
@@ -858,6 +860,8 @@ export default {
       {
         id: 26,
         name: "Stir-Fried Bok Choy",
+        image:
+          "https://www.aline-made.com/wp-content/uploads/2022/01/Bok-Choy-3.jpg",
         description: null,
         price: 195,
         cost: null,
@@ -888,6 +892,8 @@ export default {
       {
         id: 27,
         name: "Soy Garlic Spinach",
+        image:
+          "https://plantbasedmatters.net/wp-content/uploads/2020/09/Soy-Sauce-Butter-Spinach-1-scaled-e1599220204568.jpeg",
         description: null,
         price: 120,
         cost: null,
