@@ -22,7 +22,7 @@ export const http = {
 
   put: async (url, data, method = "PUT") => {
     return await http
-      .post(url, data, method)
+      .post(url, data, method)  
       .then((response) => {
         return response;
       })
