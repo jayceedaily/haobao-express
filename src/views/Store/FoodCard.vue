@@ -5,7 +5,7 @@
       'background-size: cover',
       'background-position: center',
     ]"
-    class="rounded-xl shadow-sm border border-1 flex flex-col justify-between h-72"
+    class="rounded-2xl shadow-sm border border-1 flex flex-col justify-between h-72"
   >
     <div class="bg-gradient-to-b from-black/70 p-3 rounded-t-xl h-32">
       <h2 class="font-bold text-white text-xl drop-shadow-md">
