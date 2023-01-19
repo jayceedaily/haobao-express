@@ -3,7 +3,7 @@
     <div
       class="px-5 py-10 container md:shadow-lg md:rounded-md md:border-1 md:border"
     >
-      <form @submit.prevent="handleLogin" class="h-screen sm:h-auto">
+      <form @submit.prevent="handleLogin" class="h-full sm:h-auto">
         <div class="mb-10 text-center">
           <h1 class="font-bold mb-3 text-4xl">
             Enter your<br />
