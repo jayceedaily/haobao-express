@@ -1,4 +1,14 @@
 <template>
+  <!-- <nav class="sticky top-0 z-10">
+    <div class="bg-primary shadow-lg flex justify-between p-3 mx-auto">
+      <button>
+        <ArrowLeftIcon class="w-6" />
+      </button>
+      <div class="">
+        <h1 class="font-bold text-xl mb-0">Hao Bao Wonton Noodles</h1>
+      </div>
+    </div>
+  </nav> -->
   <div class="container mx-auto sm:max-w-[400px]">
     <div class="px-3 pt-5">
       <!-- STORE TITLE -->
@@ -50,23 +60,7 @@
       <!-- STORE ITEMS END -->
     </div>
   </div>
-  <nav class="sticky bottom-0 z-10 ">
-    <div class="bg-white shadow-lg flex h-20">
-      <div class="px-4 w-1/4 pt-5 text-gray-700">
-        <BuildingStorefrontIconSolid class="mx-auto w-6" />
-      </div>
-      <div class="px-4 w-1/4 pt-5 text-gray-500">
-        <ShoppingBagIcon class="mx-auto w-6" />
-      </div>
-      <div class="px-4 w-1/4 pt-5 text-gray-500">
-        <WalletIcon class="mx-auto w-6" />
-      </div>
-
-      <div class="px-4 w-1/4 pt-5 text-gray-500">
-        <UserIcon class="mx-auto w-6" />
-      </div>
-    </div>
-  </nav>
+  <bottom-nav />
 </template>
 
 <script>
@@ -78,12 +72,18 @@ import {
   WalletIcon,
   UserIcon,
   Bars3Icon,
+  ArrowLeftIcon,
 } from "@heroicons/vue/24/outline";
-import { StarIcon, XCircleIcon, BuildingStorefrontIcon as BuildingStorefrontIconSolid } from "@heroicons/vue/24/solid";
+import {
+  StarIcon,
+  XCircleIcon,
+  BuildingStorefrontIcon as BuildingStorefrontIconSolid,
+} from "@heroicons/vue/24/solid";
 import FoodCard from "./FoodCard.vue";
 import * as Item from "@/api/item";
 import { ref } from "@vue/reactivity";
 import { computed } from "@vue/runtime-core";
+import BottomNav from "../Layout/BottomNav.vue";
 export default {
   components: {
     ClockIcon,
@@ -97,6 +97,8 @@ export default {
     WalletIcon,
     UserIcon,
     FoodCard,
+    BottomNav,
+    ArrowLeftIcon,
   },
   setup() {
     const items = ref([
