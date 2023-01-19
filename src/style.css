@@ -7,7 +7,7 @@
 @tailwind utilities;
 
 .bg-primary {
-  @apply bg-yellow-500 text-gray-900;
+  @apply bg-yellow-500 text-gray-800;
 }
 
 .font-heading {

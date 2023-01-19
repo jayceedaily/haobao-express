@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Index.vue";
 import Login from "@/views/Auth/Login.vue"
+import OtpVerification from "@/views/Auth/OtpVerification.vue"
 import Store from "@/views/Store/Index2.vue"
 
 const routes = [
@@ -13,6 +14,11 @@ const routes = [
     name: "login",
     path: "/login",
     component: Login
+  },
+  {
+    name: "otp-verification",
+    path: "/otp-verification",
+    component: OtpVerification
   },
   {
     name: "store",

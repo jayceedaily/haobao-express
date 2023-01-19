@@ -11,14 +11,12 @@
       <h2 class="font-bold text-white text-xl drop-shadow-md">
         {{ item.name }}
       </h2>
-      <!-- <span class="bg-white text-xs px-2 py-1 rounded text-red-500">🔥Best Seller</span> -->
+
     </div>
     <div class="flex justify-end p-3">
       <div
         class="rounded-full bg-yellow-500 inline-block px-2 py-1 text-xs font-bold shadow-sm"
       >
-        <!-- <span v-if="priceRange">Starts at</span> -->
-
         ₱{{ item.price.toFixed(2) }}
         <span v-if="priceRange">+</span>
       </div>

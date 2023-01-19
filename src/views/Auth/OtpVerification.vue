@@ -3,36 +3,30 @@
     <div
       class="px-5 py-10 container md:shadow-lg md:rounded-md md:border-1 md:border"
     >
-      <form @submit.prevent="handleSubmit" class="h-full sm:h-auto">
+      <form @submit.prevent="handleLogin" class="h-full sm:h-auto">
         <div class="mb-10 text-center">
           <h1 class="font-bold mb-3 text-4xl">
-            Enter your<br />
-            mobile number
+            Please enter<br />
+            your code
           </h1>
 
           <p class="text-gray-400">Start ordering after entering your number</p>
         </div>
 
         <div class="flex flex-col gap-3">
-          <div class="flex">
-            <div
-              class="border bordder-gray-400 px-3 py-2 rounded-lg border-r-0 rounded-r-none bg-gray-100 font-medium"
-            >
-              +63
-            </div>
-            <input
-              v-model="form.mobile"
-              input
-              type="tel"
-              pattern="[0-9]*"
-              inputmode="numeric"
-              name="mobile"
-              id="mobile"
-              class="border bordder-gray-400 px-3 py-2 rounded-lg w-full border-l-0 rounded-l-none font-medium"
-              maxlength="12"
-              max="12"
-            />
-          </div>
+          <input
+            v-model="form.otp"
+            input
+            type="tel"
+            pattern="[0-9]*"
+            inputmode="numeric"
+            name="mobile"
+            id="mobile"
+            class="border-yellow-400 font-medium border-b-4 text-center text-5xl"
+            maxlength="1"
+            max="1"
+            placeholder="******"
+          />
 
           <p class="text-gray-400 text-xs mb-10">
             By continuing, you agree to the collection, processing of personal
@@ -47,7 +41,7 @@
               type="submit"
               class="font-medium bg-primary px-3 py-2 rounded-lg w-full h-14 text-xl"
             >
-              Next
+              Create Account
             </button>
           </div>
         </div>
@@ -63,33 +57,22 @@ import { watch } from "@vue/runtime-core";
 import { useRouter } from "vue-router";
 
 const form = ref({
-  mobile: null,
+  otp: null,
 });
+
+const otp = ref([]);
+
 const router = useRouter();
 
-watch(
-  () => form.value.mobile,
-  (value) => {
-    // if (value.length === 3) {
-    //   form.value.mobile = value + "-";
-    // }
-    // if (value.length === 8) {
-    //   form.value.mobile = value + "-";
-    // }
-  }
-);
-
 const handleSubmit = () => {
-  console.log("handleSubmit");
-
-  router.push({
-    name: "otp-verification",
+  router.replace({
+    to: "otp-verification",
   });
 };
 
-// const handleLogin = () => {
-//   console.log(form.value);
-// };
+const handleLogin = () => {
+  console.log(form.value);
+};
 </script>
 
 <style></style>

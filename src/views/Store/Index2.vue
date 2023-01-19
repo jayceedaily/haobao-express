@@ -1,15 +1,5 @@
 <template>
-  <div class="container mx-auto lg:w-1/3">
-    <nav class="sticky top-0 z-10">
-      <div class="bg-yellow-500 justify-between flex">
-        <div class="bg-yellow-400 p-4">
-          <Bars3Icon class="w-6" />
-        </div>
-        <div class="p-4">
-          <ShoppingBagIcon class="w-6" />
-        </div>
-      </div>
-    </nav>
+  <div class="container mx-auto sm:max-w-[400px]">
     <div class="px-3 pt-5">
       <!-- STORE TITLE -->
       <div class="mb-3">
@@ -30,7 +20,7 @@
       <div class="mb-5 flex gap-2 overflow-auto hide-scroll" id="filter-bar">
         <span
           v-if="filter != null"
-          class="pl-5 pr-2 py-2 rounded-full text-sm font-medium whitespace-nowrap bg-yellow-500 flex gap-1"
+          class="pl-5 pr-2 py-2 rounded-full text-sm font-medium whitespace-nowrap bg-yellow-500 flex gap-1 cursor-pointer"
           @click="filter = null"
         >
           <span>
@@ -45,7 +35,7 @@
             (cat) => cat.id != filter?.id
           )"
           :key="index"
-          class="px-5 py-2 rounded-full text-sm font-medium whitespace-nowrap"
+          class="px-5 py-2 rounded-full text-sm font-medium whitespace-nowrap cursor-pointer"
           :class="filter?.id === category.id ? 'bg-yellow-500' : 'bg-gray-200'"
           @click="handleFilterSelect(category)"
         >
@@ -60,16 +50,36 @@
       <!-- STORE ITEMS END -->
     </div>
   </div>
+  <nav class="sticky bottom-0 z-10 ">
+    <div class="bg-white shadow-lg flex h-20">
+      <div class="px-4 w-1/4 pt-5 text-gray-700">
+        <BuildingStorefrontIconSolid class="mx-auto w-6" />
+      </div>
+      <div class="px-4 w-1/4 pt-5 text-gray-500">
+        <ShoppingBagIcon class="mx-auto w-6" />
+      </div>
+      <div class="px-4 w-1/4 pt-5 text-gray-500">
+        <WalletIcon class="mx-auto w-6" />
+      </div>
+
+      <div class="px-4 w-1/4 pt-5 text-gray-500">
+        <UserIcon class="mx-auto w-6" />
+      </div>
+    </div>
+  </nav>
 </template>
 
 <script>
 import {
   ClockIcon,
   StarIcon as StarIconOutline,
+  BuildingStorefrontIcon,
   ShoppingBagIcon,
+  WalletIcon,
+  UserIcon,
   Bars3Icon,
 } from "@heroicons/vue/24/outline";
-import { StarIcon, XCircleIcon } from "@heroicons/vue/24/solid";
+import { StarIcon, XCircleIcon, BuildingStorefrontIcon as BuildingStorefrontIconSolid } from "@heroicons/vue/24/solid";
 import FoodCard from "./FoodCard.vue";
 import * as Item from "@/api/item";
 import { ref } from "@vue/reactivity";
@@ -78,10 +88,14 @@ export default {
   components: {
     ClockIcon,
     StarIconOutline,
+    BuildingStorefrontIcon,
+    BuildingStorefrontIconSolid,
     StarIcon,
     ShoppingBagIcon,
     Bars3Icon,
     XCircleIcon,
+    WalletIcon,
+    UserIcon,
     FoodCard,
   },
   setup() {
