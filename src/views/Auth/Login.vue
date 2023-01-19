@@ -1,9 +1,9 @@
 <template>
   <div class="pt-10">
     <div
-      class="px-5 py-10 container mx-auto md:w-1/2 lg:w-1/3 w-full md:shadow-lg md:rounded-md md:border-1 md:border "
+      class="px-5 py-10 container md:shadow-lg md:rounded-md md:border-1 md:border"
     >
-      <form @submit.prevent="handleLogin">
+      <form @submit.prevent="handleLogin" class="h-screen sm:h-auto">
         <div class="mb-10 text-center">
           <h1 class="font-bold mb-3 text-4xl">
             Enter your<br />
@@ -22,10 +22,15 @@
             </div>
             <input
               v-model="form.mobile"
-              type="text"
+              input
+              type="tel"
+              pattern="[0-9]*"
+              inputmode="numeric"
               name="mobile"
               id="mobile"
               class="border bordder-gray-400 px-3 py-2 rounded-lg w-full border-l-0 rounded-l-none font-medium"
+              maxlength="12"
+              max="12"
             />
           </div>
 
@@ -34,7 +39,9 @@
             data and the user agreement
           </p>
 
-          <div>
+          <div
+            class="fixed bottom-5 inset-x-0 pb-2 sm:pb-5 w-full mx-auto px-5 sm:static sm:p-0"
+          >
             <button
               type="submit"
               class="font-medium bg-primary px-3 py-2 rounded-lg w-full"
@@ -51,10 +58,24 @@
 <script setup>
 import { ref } from "@vue/reactivity";
 import subtitle from "@/components/Subtitle.vue";
+import { watch } from "@vue/runtime-core";
 
 const form = ref({
   mobile: null,
 });
+
+watch(
+  () => form.value.mobile,
+  (value) => {
+    // if (value.length === 3) {
+    //   form.value.mobile = value + "-";
+    // }
+    // if (value.length === 8) {
+    //   form.value.mobile = value + "-";
+    // }
+
+  }
+);
 
 const handleLogin = () => {
   console.log(form.value);
