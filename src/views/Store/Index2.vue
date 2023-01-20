@@ -60,7 +60,6 @@
       <!-- STORE ITEMS END -->
     </div>
   </div>
-  <bottom-nav />
 </template>
 
 <script>
@@ -83,7 +82,6 @@ import FoodCard from "./FoodCard.vue";
 import * as Item from "@/api/item";
 import { ref } from "@vue/reactivity";
 import { computed } from "@vue/runtime-core";
-import BottomNav from "../Layout/BottomNav.vue";
 export default {
   components: {
     ClockIcon,
@@ -97,7 +95,6 @@ export default {
     WalletIcon,
     UserIcon,
     FoodCard,
-    BottomNav,
     ArrowLeftIcon,
   },
   setup() {
