@@ -231,7 +231,7 @@ export const products = ref([
   },
   {
     name: "Hao Bao Egg Fried Rice - Family Platter",
-    price: 360,
+    price: 245,
     category: "Fried Rice - Family Platter",
     tags: ["POPULAR"],
   },
