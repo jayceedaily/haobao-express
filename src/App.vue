@@ -1,8 +1,8 @@
 <template>
   <div class="container mx-auto sm:max-w-[400px]">
     <router-view />
+    <!-- <bottom-nav /> -->
   </div>
-  <bottom-nav />
 </template>
 
 <script>

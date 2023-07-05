@@ -14,9 +14,6 @@ export const http = {
     return await request(url, method, data)
       .then((response) => {
         return response;
-      })
-      .catch((error) => {
-        return error.response;
       });
   },
 

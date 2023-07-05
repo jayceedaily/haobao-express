@@ -33,6 +33,12 @@
               max="12"
             />
           </div>
+          <span
+            v-if="errors.mobile"
+            class="bg-red-100 text-red-700 px-5 py-5 rounded-lg"
+          >
+            {{ errors.mobile[0] }}
+          </span>
 
           <p class="text-gray-400 text-xs mb-10">
             By continuing, you agree to the collection, processing of personal
@@ -43,7 +49,6 @@
             class="fixed bottom-5 inset-x-0 pb-2 sm:pb-5 w-full mx-auto px-5 sm:static sm:p-0"
           >
             <button
-              @click="handleSubmit"
               type="submit"
               class="font-medium bg-primary px-3 py-2 rounded-lg w-full h-14 text-xl"
             >
@@ -61,10 +66,14 @@ import { ref } from "@vue/reactivity";
 import subtitle from "@/components/Subtitle.vue";
 import { watch } from "@vue/runtime-core";
 import { useRouter } from "vue-router";
+import { login } from "@/api/auth";
 
 const form = ref({
   mobile: null,
 });
+
+const errors = ref({});
+
 const router = useRouter();
 
 watch(
@@ -80,11 +89,33 @@ watch(
 );
 
 const handleSubmit = () => {
-  console.log("handleSubmit");
+  // console.log("handleSubmit");
 
-  router.push({
-    name: "otp-verification",
-  });
+  // router.push({
+  //   name: "otp-verification",
+  // });
+
+  errors.value = {};
+
+  login(form.value)
+    .then((response) => {
+      router.push({
+        name: "otp-verification",
+        query: {
+          mobile: form.value.mobile,
+        },
+      });
+    })
+    .catch((error) => {
+      console.log(error.response.data.errors);
+      if (error.response.status === 422) {
+        errors.value = error.response.data.errors;
+      }
+
+      if (error.response.status === 404) {
+        console.log("red");
+      }
+    });
 };
 
 // const handleLogin = () => {

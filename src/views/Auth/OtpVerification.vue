@@ -23,8 +23,8 @@
             name="mobile"
             id="mobile"
             class="border-yellow-400 font-medium border-b-4 text-center text-5xl"
-            maxlength="1"
-            max="1"
+            maxlength="6"
+            max="6"
             placeholder="******"
           />
 

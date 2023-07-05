@@ -82,12 +82,6 @@ export const products = ref([
     category: "Specialty",
   },
   {
-    id: 5,
-    name: "Extra Noodles",
-    price: 50,
-    category: "Specialty",
-  },
-  {
     id: 6,
     name: "Fried Chicken",
     images: [chicken],
