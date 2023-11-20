@@ -80,16 +80,16 @@ export const products = ref([
   },
   {
     id: 3,
-    name: "Jumbo Siopao Asado",
+    name: "Siopao Asado",
     price: 59,
     category: "Specialty",
   },
-  {
-    id: 3,
-    name: "Jumbo Siopao Bola-Bola",
-    price: 59,
-    category: "Specialty",
-  },
+  // {
+  //   id: 3,
+  //   name: "Siopao Bola-Bola",
+  //   price: 59,
+  //   category: "Specialty",
+  // },
   {
     id: 6,
     name: "Fried Chicken",
@@ -101,7 +101,7 @@ export const products = ref([
         id: 7,
         parent_id: 6,
         name: "4PC Fried Chicken - Classic",
-        price: 280,
+        price: 299,
       },
       {
         id: 8,
@@ -113,7 +113,7 @@ export const products = ref([
         id: 9,
         parent_id: 6,
         name: "8PC Fried Chicken - Classic",
-        price: 560,
+        price: 549,
       },
       {
         id: 10,
