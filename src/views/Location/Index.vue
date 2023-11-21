@@ -36,7 +36,7 @@
 			Open 3PM - 12MN Everyday
 		</div>
         <div class="mb-3 text-sm text-gray-500">
-			Ground Floor Unit 2-3, Plaza Erlinda, Magalang Ave, corner Don Pepe Street, Angeles, 2009 Pampanga
+			Ground Floor Unit 2-3, Plaza Erlinda, Magalang Ave, corner Don Pepe Street, Angeles, 2009 Pampanga - Near BDO / 7-Eleven Stoplight
         </div>
         <div>
           <iframe
