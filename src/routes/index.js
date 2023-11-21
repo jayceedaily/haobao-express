@@ -13,12 +13,12 @@ const routes = [
   },
   {
     path: "/loc/auf",
-    name: "location",
+    name: "location.auf",
     component: () => import("@/views/Location/Index.vue"),
   },
   {
     path: "/loc/magalang-ave",
-    name: "location",
+    name: "location.magalang",
     component: () => import("@/views/Location/Index.vue"),
   },
 ];
