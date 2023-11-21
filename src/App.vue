@@ -1,86 +1,34 @@
 <template>
-  <div class="w-full bg-[#ed2027] py-10 flex justify-between px-5">
-    <img src="./assets/haobao-logo-square.jpg" alt="" class="w-32 mx-auto" />
-  </div>
-  <div
-    class="p-3 flex flex-col gap-10 container mx-auto lg:w-2/3 md:w-3/4 xl:w-1/3"
-  >
-    <div v-for="(category, index) in categories" :key="index">
-      <h3 class="text-lg font-bold mb-3 uppercase">{{ category }}</h3>
-      <div class="grid grid-cols-1 gap-3 items-start">
-        <product-display-summary
-          v-for="(product, index) in productByCategory(category)"
-          :key="index"
-          :product="product"
+  <div class="mb-5">
+    <div class="w-full bg-[#ed2027] py-5 text-white hidden sm:block">
+      <nav class="mx-auto lg:w-2/3 md:w-3/4 xl:w-1/3 flex">
+        <img
+          src="@/assets/haobao-logo-square-optimized.jpg"
+          alt=""
+          class="w-16 mr-5"
         />
-      </div>
+        <ol class="flex gap-5 items-center text-lg font-medium">
+          <li>
+            <router-link :to="{ name: 'home' }"> Menu </router-link>
+          </li>
+          <li>
+            <router-link :to="{ name: 'location' }"> Location </router-link>
+          </li>
+        </ol>
+      </nav>
+    </div>
+
+    <div class="w-full bg-[#ed2027] py-5 text-white block sm:hidden">
+      <nav class="mx-auto lg:w-2/3 md:w-3/4 xl:w-1/3 flex px-3">
+        <img
+          src="@/assets/haobao-logo-square-optimized.jpg"
+          alt=""
+          class="w-16 mr-5"
+        />
+      </nav>
     </div>
   </div>
+  <router-view />
 </template>
 
-<script>
-import { ref, computed } from "@vue/reactivity";
-import {
-  ShoppingBagIcon,
-  ChevronDoubleRightIcon,
-} from "@heroicons/vue/24/outline";
-
-import ProductDisplaySummary from "./components/ProductDisplaySummary.vue";
-import {products} from "./product";
-
-export default {
-  name: "App",
-  components: {
-    ShoppingBagIcon,
-    ChevronDoubleRightIcon,
-    ProductDisplaySummary,
-  },
-  setup() {
-
-    
-    const cart = ref([]);
-    const addToCart = (product) => {
-      cart.value.push(product);
-    };
-    const displayVariants = ref([]);
-
-    // const product =products;
-
-    const categories = computed(() => {
-      let _categories = [];
-
-      products.value.forEach((_product) => {
-        if (!_categories.includes(_product.category)) {
-          _categories.push(_product.category);
-        }
-      });
-
-      return _categories;
-    });
-
-    const productByCategory = (category) => {
-      return products.value.filter(
-        (_product) => _product.category === category
-      );
-    };
-
-    return {
-      products,
-      categories,
-      cart,
-      displayVariants,
-      addToCart,
-      productByCategory,
-    };
-  },
-};
-</script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: "Rubik", sans-serif;
-}
-</style>
+<script></script>
