@@ -119,7 +119,7 @@ export const products = ref([
         id: 10,
         parent_id: 6,
         name: "4PC Fried Chicken - Hao Bao Original",
-        price: 280,
+        price: 299,
         tags: ["POPULAR", "RECOMMENDED"],
       },
       {
@@ -133,14 +133,14 @@ export const products = ref([
         id: 12,
         parent_id: 6,
         name: "8PC Fried Chicken - Hao Bao Original",
-        price: 560,
+        price: 549,
         tags: ["POPULAR", "RECOMMENDED"],
       },
       {
         id: 13,
         parent_id: 6,
         name: "4PC Fried Chicken - Orange Chicken",
-        price: 280,
+        price: 299,
         tags: ["POPULAR"],
       },
       {
@@ -152,12 +152,12 @@ export const products = ref([
       },
       {
         name: "8PC Fried Chicken - Orange Chicken",
-        price: 560,
+        price: 549,
         tags: ["POPULAR"],
       },
       {
         name: "4PC Fried Chicken - Honey Garlic",
-        price: 280,
+        price: 299,
       },
       {
         name: "6PC Fried Chicken - Honey Garlic",
@@ -165,12 +165,12 @@ export const products = ref([
       },
       {
         name: "8PC Fried Chicken - Honey Garlic",
-        price: 560,
+        price: 549,
       },
 
       {
         name: "4PC Fried Chicken - Szechuan",
-        price: 280,
+        price: 299,
         tags: ["NEW"],
       },
       {
@@ -180,7 +180,7 @@ export const products = ref([
       },
       {
         name: "8PC Fried Chicken - Szechuan",
-        price: 560,
+        price: 549,
         tags: ["NEW"],
       },
     ],
