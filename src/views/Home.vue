@@ -1,6 +1,6 @@
 <template>
 
-  <div
+  <!-- <div
     class="p-3 flex flex-col gap-10 container mx-auto lg:w-2/3 md:w-3/4 xl:w-1/3 w-full"
   >
     <div v-for="(category, index) in categories" :key="index">
@@ -13,9 +13,16 @@
         />
       </div>
     </div>
-  </div>
+  </div> -->
 
-  <router-view/>
+  <!-- <router-view/> -->
+
+  <div>
+
+    <img src="@/assets/menu/p1.jpg" alt="">
+    <img src="@/assets/menu/p2.jpg" alt="">
+    <img src="@/assets/menu/p3.jpg" alt="">
+  </div>
 </template>
 
 <script>
