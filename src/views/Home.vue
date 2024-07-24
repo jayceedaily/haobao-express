@@ -21,7 +21,7 @@
 
     <img src="@/assets/menu/p1.jpg" alt="">
     <img src="@/assets/menu/p2-1.jpg" alt="">
-    <img src="@/assets/menu/p3.jpg" alt="">
+    <img src="@/assets/menu/p3-1.jpg" alt="">
   </div>
 </template>
 
