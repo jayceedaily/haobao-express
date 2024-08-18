@@ -19,9 +19,9 @@
 
   <div>
 
-    <img src="@/assets/menu/p1.jpg" alt="">
-    <img src="@/assets/menu/p2-1.jpg" alt="">
-    <img src="@/assets/menu/p3-1.jpg" alt="">
+    <img src="@/assets/menu/rgb_1.jpg" alt="">
+    <img src="@/assets/menu/rgb_2.jpg" alt="">
+    <!-- <img src="@/assets/menu/p3-1.jpg" alt=""> -->
   </div>
 </template>
 
