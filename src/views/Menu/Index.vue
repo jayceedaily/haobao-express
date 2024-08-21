@@ -48,7 +48,7 @@
       <div class="">
         <div>
           <img
-            src="@/assets/items/beef brocolli.png"
+            src="@/assets/items/beef-brocolli.png"
             class="h-[200px] mx-auto"
             alt=""
           />
@@ -101,7 +101,7 @@
 
       <div class="">
         <img
-          src="@/assets/items/szechuan pork.png"
+          src="@/assets/items/szechuan-pork.png"
           class="h-[200px] mx-auto"
           alt=""
         />
@@ -215,7 +215,7 @@
 
       <div class="">
         <img
-          src="@/assets/items/sweet and sour pork.png"
+          src="@/assets/items/sweet-and-sour-pork.png"
           class="h-[200px] mx-auto"
           alt=""
         />
