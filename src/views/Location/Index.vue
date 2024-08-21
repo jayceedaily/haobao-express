@@ -3,7 +3,7 @@
     <div class="lg:w-2/3 md:w-3/4 xl:w-1/3 flex mx-auto">
       <div>
         <div class="font-medium text-xl">
-          Hao Bao - Angeles University Foundation (AUF) Branch
+          Angeles University Foundation (AUF) Branch
         </div>
         <div class="text-blue-600 text-sm">Open 11AM - 10:30PM Everyday</div>
         <div class="mb-3 text-sm text-gray-500">
@@ -26,7 +26,7 @@
 
     <div class="lg:w-2/3 md:w-3/4 xl:w-1/3 flex mx-auto">
       <div>
-        <div class="font-medium text-xl">Hao Bao - Marisol Branch</div>
+        <div class="font-medium text-xl">Marisol Branch, Angeles City</div>
         <div class="text-blue-600 text-sm">Open 3PM - 12MN Everyday</div>
         <div class="mb-3 text-sm text-gray-500">
           Ground Floor Unit 2-3, Plaza Erlinda, Magalang Ave, corner Don Pepe
@@ -48,7 +48,7 @@
     <div class="lg:w-2/3 md:w-3/4 xl:w-1/3 flex mx-auto">
       <div>
         <div class="font-medium text-xl">
-          Hao Bao - Baliti San Fernando Branch
+          Baliti, City of San Fernando 
         </div>
         <div class="text-blue-600 text-sm">Open 3PM - 12MN Everyday</div>
         <div class="mb-3 text-sm text-gray-500">
