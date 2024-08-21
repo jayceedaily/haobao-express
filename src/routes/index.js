@@ -21,6 +21,11 @@ const routes = [
     name: "location.magalang",
     component: () => import("@/views/Location/Index.vue"),
   },
+  {
+    path: "/new",
+    name: "menu.index",
+    component: () => import("@/views/Menu/Index.vue"),
+  },
 ];
 
 const router = createRouter({
