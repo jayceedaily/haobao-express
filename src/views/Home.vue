@@ -18,8 +18,8 @@
   <!-- <router-view/> -->
 
   <div class="mx-auto w-full">
-    <img src="@/assets/menu/112024_1_2.jpg" alt="" class="mx-auto">
     <img src="@/assets/menu/112024_2_2.jpg" alt="" class="mx-auto">
+    <img src="@/assets/menu/112024_1_2.jpg" alt="" class="mx-auto">
     <!-- <img src="@/assets/menu/rgb_1.jpg" alt="">
     <img src="@/assets/menu/rgb_2.jpg" alt=""> -->
     <!-- <img src="@/assets/menu/p3-1.jpg" alt=""> -->
