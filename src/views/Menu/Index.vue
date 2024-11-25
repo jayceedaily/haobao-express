@@ -109,7 +109,7 @@ const items = [
   {
     name: "Boneless Fried Chicken",
     category: "Main Dish",
-    image: "src/assets/items/6pc.png",
+    image: "@/assets/items/6pc.png",
     translation: {
       cn: "炸雞",
     },
