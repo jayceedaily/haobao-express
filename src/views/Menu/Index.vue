@@ -109,7 +109,7 @@ const items = [
   {
     name: "Boneless Fried Chicken",
     category: "Main Dish",
-    image: "./items/6pc.png",
+    image: "./items/6pc-min.png",
     translation: {
       cn: "炸雞",
     },
@@ -155,7 +155,7 @@ const items = [
   {
     name: "Char Siu (Pork Asado)",
     category: "Main Dish",
-    image: "./items/charsiu.png",
+    image: "./items/charsiu-min.png",
     translation: {
       cn: "炸雞",
     },
@@ -167,7 +167,7 @@ const items = [
   {
     name: "Salt & Pepper Pork",
     category: "Main Dish",
-    image: "./items/salt-and-pepper-pork.png",
+    image: "./items/salt-and-pepper-pork-min.png",
     translation: {
       cn: "炸雞",
     },
@@ -179,7 +179,7 @@ const items = [
   {
     name: "Beef Brocolli",
     category: "Main Dish",
-    image: "./items/beef-brocolli.png",
+    image: "./items/beef-brocolli-min.png",
     translation: {
       cn: "炸雞",
     },
@@ -191,7 +191,7 @@ const items = [
   {
     name: "Stir-Fried Bok Choy",
     category: "Main Dish",
-    image: "./items/bokchoy.png",
+    image: "./items/bokchoy-min.png",
     translation: {
       cn: "炸雞",
     },
@@ -203,7 +203,7 @@ const items = [
   {
     name: "Sweet & Sour Pork",
     category: "Main Dish",
-    image: "./items/sweet-and-sour-pork.png",
+    image: "./items/sweet-and-sour-pork-min.png",
     translation: {
       cn: "炸雞",
     },
@@ -238,7 +238,7 @@ const items = [
   {
     name: "Soy Garlic Kangkong",
     category: "Main Dish",
-    image: "./items/kangkong.png",
+    image: "./items/kangkong-min.png",
     translation: {
       cn: "炸雞",
     },
@@ -250,7 +250,7 @@ const items = [
   {
     name: "Shanghai Roll",
     category: "Main Dish",
-    image: "./items/shanghai.png",
+    image: "./items/shanghai-min.png",
     translation: {
       cn: "炸雞",
     },
@@ -286,7 +286,7 @@ const items = [
   {
     name: "Szechuan Pork",
     category: "Main Dish",
-    image: "./items/szechuan-pork.png",
+    image: "./items/szechuan-pork-min.png",
     translation: {
       cn: "炸雞",
     },
@@ -322,7 +322,7 @@ const items = [
   {
     name: "Shrimp Chao Fan",
     category: "Fried Rice",
-    image: "./items/shrimp-chao-fan.png",
+    image: "./items/shrimp-chao-fan-min.png",
     translation: {
       cn: "炸雞",
     },
@@ -358,7 +358,7 @@ const items = [
   {
     name: "Yang Chow",
     category: "Fried Rice",
-    image: "./items/yangchow.png",
+    image: "./items/yangchow-min.png",
     translation: {
       cn: "炸雞",
     },
@@ -394,7 +394,7 @@ const items = [
   {
     name: "Pork Chao Fan",
     category: "Fried Rice",
-    image: "./items/pork-chao-fan.png",
+    image: "./items/pork-chao-fan-min.png",
     translation: {
       cn: "炸雞",
     },
@@ -432,7 +432,7 @@ const items = [
   {
     name: "Wonton Mami",
     category: "Noodle Soup",
-    image: "./items/wonton-mami.png",
+    image: "./items/wonton-mami-min.png",
     translation: {
       cn: "炸雞",
     },
@@ -444,7 +444,7 @@ const items = [
   {
     name: "Taiwanese Braised Beef Mami",
     category: "Noodle Soup",
-    image: "./items/braised-beef-mami.png",
+    image: "./items/braised-beef-mami-min.png",
     translation: {
       cn: "炸雞",
     },
@@ -456,7 +456,7 @@ const items = [
   {
     name: "Beef Wonton Mami",
     category: "Noodle Soup",
-    image: "./items/beef-wonton-mami.png",
+    image: "./items/beef-wonton-mami-min.png",
     translation: {
       cn: "炸雞",
     },
@@ -468,7 +468,7 @@ const items = [
   {
     name: "Beef Mami",
     category: "Noodle Soup",
-    image: "./items/beef-mami.png",
+    image: "./items/beef-mami-min.png",
     translation: {
       cn: "炸雞",
     },
@@ -480,7 +480,7 @@ const items = [
   {
     name: "Wonton Soup",
     category: "Noodle Soup",
-    image: "./items/wonton-soup.png",
+    image: "./items/wonton-soup-min.png",
     translation: {
       cn: "炸雞",
     },
@@ -492,7 +492,7 @@ const items = [
   {
     name: "Century Egg Congee",
     category: "Noodle Soup",
-    image: "./items/congee.png",
+    image: "./items/congee-min.png",
     translation: {
       cn: "炸雞",
     },
@@ -528,7 +528,7 @@ const items = [
   {
     name: "Sharks Fin",
     category: "Dimsum",
-    image: "./items/sharks-fin.png",
+    image: "./items/sharks-fin-min.png",
     translation: {
       cn: "炸雞",
     },
@@ -540,7 +540,7 @@ const items = [
   {
     name: "Siopao",
     category: "Dimsum",
-    image: "./items/siopao.png",
+    image: "./items/siopao-min.png",
     translation: {
       cn: "炸雞",
     },
@@ -574,7 +574,7 @@ const items = [
   {
     name: "Dry Wonton",
     category: "Dimsum",
-    image: "./items/dry-wonton.png",
+    image: "./items/dry-wonton-min.png",
     translation: {
       cn: "炸雞",
     },
@@ -586,7 +586,7 @@ const items = [
   {
     name: "Pork Bean Curd Roll",
     category: "Dimsum",
-    image: "./items/pork-bean-curd-roll.png",
+    image: "./items/pork-bean-curd-roll-min.png",
     translation: {
       cn: "炸雞",
     },
@@ -598,7 +598,7 @@ const items = [
   {
     name: "Pork Shumai",
     category: "Dimsum",
-    image: "./items/siomai.png",
+    image: "./items/siomai-min.png",
     translation: {
       cn: "炸雞",
     },
@@ -610,7 +610,7 @@ const items = [
   {
     name: "Chicken Feet",
     category: "Dimsum",
-    image: "./items/chicken-feet.png",
+    image: "./items/chicken-feet-min.png",
     translation: {
       cn: "炸雞",
     },
