@@ -1,7 +1,7 @@
 <template>
-  <div class="mb-5">
-    <div class="w-full bg-[#ed2027] py-5 text-white hidden sm:block">
-      <nav class="mx-auto lg:w-2/3 md:w-3/4 xl:w-1/3 flex">
+  <div class="mb-[120px]">
+    <div class="w-full bg-[#ed2027] py-5 text-white hidden sm:block  top-0 fixed z-10">
+      <nav class="mx-auto max-w-3xl flex">
         <img
           src="@/assets/haobao-logo-square-optimized.jpg"
           alt=""

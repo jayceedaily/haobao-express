@@ -15,7 +15,7 @@
     </div>
   </div> -->
 
-  <!-- <router-view/> -->
+  <router-view/>
 
   <div class="mx-auto w-full">
     <img src="@/assets/menu/112024_2_2.jpg" alt="" class="mx-auto">
