@@ -5,7 +5,7 @@
         <div
           v-for="(item, index) in cart"
           :key="index"
-          class="flex justify-between py-2 rounded-lg px-3"
+          class="flex justify-between py-2  px-3"
           :class="item.quantity == 0 ? 'bg-gray-100' : ''"
         >
           <div class="flex gap-5">
@@ -54,18 +54,21 @@
         </div>
       </div>
       <hr class="my-5" />
-      <div v-if="cart.length == 0">Your Cart is Empty</div>
-      <div v-else class="flex flex-col gap-3">
-        <div class="flex justify-between">
-          <div class="font-medium">Delivery</div>
-          FREE
-        </div>
-        <div class="flex justify-between">
-          <div class="font-medium">Total</div>
+	  <div class="px-5 pb-5">
 
-          ₱{{ cartTotal.toLocaleString() }}
-        </div>
-      </div>
+		  <div v-if="cart.length == 0">Your Cart is Empty</div>
+		  <div v-else class="flex flex-col gap-3">
+			<div class="flex justify-between">
+			  <div class="font-medium">Delivery</div>
+			  FREE
+			</div>
+			<div class="flex justify-between">
+			  <div class="font-medium">Total</div>
+	
+			  ₱{{ cartTotal.toLocaleString() }}
+			</div>
+		  </div>
+	  </div>
     </template>
     <template #action> ss </template>
   </hb-modal>
