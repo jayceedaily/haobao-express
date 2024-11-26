@@ -35,23 +35,23 @@
 		  To: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
 	  -->
         <div
-          class="relative bg-white overflow-visible dark:bg-gray-900 rounded-lg text-left shadow-xl transform transition-all sm:my-8 sm:max-w-lg sm:w-full"
+          class="relative bg-white overflow-visible  rounded-lg text-left shadow-xl transform transition-all sm:my-8 sm:max-w-lg sm:w-full"
         >
           <div class="flex justify-between px-5 pt-4">
             <div>
-              <p v-if="title" class="font-medium text-xl mb-3 dark:text-white">
+              <p v-if="title" class="font-medium text-xl mb-3 ">
                 {{ title }}
               </p>
               <slot name="title"></slot>
             </div>
             <div v-if="showClose">
               <button @click="$emit('close')">
-                <XCircleIcon class="w-6 h-6 opacity-30 dark:text-gray-500" />
+                <XCircleIcon class="w-6 h-6 opacity-30 " />
               </button>
             </div>
           </div>
           <div
-            class="bg-white dark:bg-gray-900 overflow-visible rounded-b-lg"
+            class="bg-white  overflow-visible rounded-b-lg"
             :class="noPadding ? '' : 'px-5 pb-5'"
           >
             <slot name="content" />
