@@ -132,7 +132,6 @@
       </div>
       <div class="flex gap-3 flex-wrap w-full flex-none">
         <button
-          :key="index"
           class="font-medium px-3 py-1 rounded-full uppercase whitespace-nowrap"
           @click="filter = null"
           :class="
@@ -193,6 +192,7 @@ try {
   cart.value = JSON.parse(localStorage.getItem("cart"));
 } catch (error) {
   localStorage.removeItem("cart");
+  cart.value = [];
 }
 
 watch(
