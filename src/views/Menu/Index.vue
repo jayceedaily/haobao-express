@@ -130,11 +130,10 @@
           </div>
         </button>
       </div>
-      <div class="flex gap-3 overflow-x-scroll whitespace-nowrap">
-        
+      <div class="flex gap-3 flex-wrap w-full flex-none">
         <button
           :key="index"
-          class="font-medium px-3 py-1 rounded-full uppercase text-xs"
+          class="font-medium px-3 py-1 rounded-full uppercase whitespace-nowrap"
           @click="filter = null"
           :class="
             filter == null
@@ -147,7 +146,7 @@
         <button
           v-for="(category, index) in categories"
           :key="index"
-          class="font-medium px-3 py-1 rounded-full uppercase text-xs"
+          class="font-medium px-3 py-1 rounded-full uppercase whitespace-nowrap"
           :class="
             filter == category
               ? 'bg-primary text-white'
@@ -175,7 +174,7 @@
 </template>
 
 <script setup>
-import { computed, ref } from "vue";
+import { computed, ref, watch } from "vue";
 import HbModal from "../../components/HbModal.vue";
 import ProductCard from "./Partials/ProductCard.vue";
 import { ShoppingBagIcon } from "@heroicons/vue/24/outline";
@@ -189,6 +188,23 @@ const selectedItem = ref(null);
 const showCart = ref(false);
 
 const cart = ref([]);
+
+try {
+  cart.value = JSON.parse(localStorage.getItem("cart"));
+} catch (error) {
+  localStorage.removeItem("cart");
+}
+
+watch(
+  cart,
+  (value) => {
+    localStorage.setItem("cart", JSON.stringify(value));
+  },
+  {
+    immediate: true,
+    deep: true,
+  }
+);
 
 const handleDelete = (index) => {
   cart.value = cart.value.filter((item, i) => {

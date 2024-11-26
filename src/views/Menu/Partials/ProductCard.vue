@@ -1,11 +1,11 @@
 <template>
   <div>
     <div class="relative">
-      <div class="absolute right-10 flex flex-col">
+      <div class="absolute top-[-20px] flex flex-col">
         <div
           v-for="(tag, index) in item.tags"
           :key="index"
-          class="text-white text-xs bg-primary font-bold px-3 py-1 rounded-full mb-1 flex shadow-xl"
+          class="text-white bg-primary font-medium text-base px-3 py-1 rounded-full mb-1 flex shadow-x "
         >
           {{ tag }}
         </div>

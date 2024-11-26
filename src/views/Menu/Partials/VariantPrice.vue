@@ -7,14 +7,14 @@
           highestPricedItem.price * (highestPricedItem.min_transaction || 1) !=
           lowestPricedItem.price
         "
-        class="text-base text-gray-600"
+        class="text-base text-gray-500"
         > - ₱{{
           highestPricedItem.price * (highestPricedItem.min_transaction || 1)
         }}</span
       >
     </div>
-    <div class="text-gray-400 text-sm">
-      ( {{ props.variants.length }} Options )
+    <div class="text-gray-500">
+      ( More Options )
     </div>
   </div>
 </template>
