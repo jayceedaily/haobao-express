@@ -3,7 +3,7 @@
     <button @click="showCart = true">
       <div class="relative w-12 h-12">
         <div
-          class="absolute text-xs px-3 py-2 bg-primary shadow-md text-white rounded-full right-0 font-bold"
+          class="absolute text-xs px-2 py-1 bg-primary shadow-md text-white rounded-full right-[-10px] top-[-6px] font-bold"
         >
           {{ cart.length }}
         </div>
