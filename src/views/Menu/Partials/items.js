@@ -9,6 +9,7 @@ export const items = [
     price: null,
     min_transaction: null,
     max_transaction: null,
+    modifiers: [],
     tags: ["BEST SELLER"],
     variants: [
       {
@@ -23,6 +24,33 @@ export const items = [
         variants: [],
         min_transaction: null,
         max_transaction: null,
+        modifiers: [
+          {
+            name: "Sauce Flavor",
+            items: [
+              {
+                name: "Hao Bao Original",
+                price: 0,
+              },
+              {
+                name: "Hao Bao Spicy",
+                price: 0,
+              },
+              {
+                name: "Honey Garlic",
+                price: 0,
+              },
+              {
+                name: "Orange Chicken",
+                price: 28,
+              },
+              {
+                name: "Soy Garlic",
+                price: 0,
+              },
+            ],
+          },
+        ],
       },
       {
         name: "6PC Boneless Fried Chicken",
@@ -36,7 +64,9 @@ export const items = [
         variants: [],
         min_transaction: null,
         max_transaction: null,
+        modifiers: [],
       },
+
       {
         name: "Boneless Fried Chicken Bulk",
         category: "Main Dish",
@@ -49,6 +79,7 @@ export const items = [
         variants: [],
         min_transaction: 8,
         max_transaction: null,
+        modifiers: [],
       },
     ],
   },
@@ -63,6 +94,7 @@ export const items = [
     price: 298,
     min_transaction: null,
     max_transaction: null,
+    modifiers: [],
     variants: [],
   },
   {
@@ -76,6 +108,7 @@ export const items = [
     price: 298,
     min_transaction: null,
     max_transaction: null,
+    modifiers: [],
     variants: [],
   },
   {
@@ -88,6 +121,7 @@ export const items = [
     price: 318,
     min_transaction: null,
     max_transaction: null,
+    modifiers: [],
     variants: [],
   },
   {
@@ -101,6 +135,7 @@ export const items = [
     price: 148,
     min_transaction: null,
     max_transaction: null,
+    modifiers: [],
     variants: [],
   },
   {
@@ -113,6 +148,7 @@ export const items = [
     price: null,
     min_transaction: null,
     max_transaction: null,
+    modifiers: [],
     variants: [
       {
         name: "Sharing",
@@ -124,7 +160,9 @@ export const items = [
         variants: [],
         min_transaction: null,
         max_transaction: null,
+        modifiers: [],
       },
+
       {
         name: "Platter",
         category: "Main Dish",
@@ -135,6 +173,7 @@ export const items = [
         variants: [],
         min_transaction: null,
         max_transaction: null,
+        modifiers: [],
       },
     ],
   },
@@ -148,6 +187,7 @@ export const items = [
     price: 98,
     min_transaction: null,
     max_transaction: null,
+    modifiers: [],
     variants: [],
   },
   {
@@ -161,6 +201,7 @@ export const items = [
     price: null,
     min_transaction: null,
     max_transaction: null,
+    modifiers: [],
     variants: [
       {
         name: "6PC Shanghai Roll",
@@ -172,7 +213,9 @@ export const items = [
         variants: [],
         min_transaction: null,
         max_transaction: null,
+        modifiers: [],
       },
+
       {
         name: "18PC Shanghai Roll",
         category: "Main Dish",
@@ -184,6 +227,7 @@ export const items = [
         variants: [],
         min_transaction: null,
         max_transaction: null,
+        modifiers: [],
       },
     ],
   },
@@ -198,6 +242,7 @@ export const items = [
     price: null,
     min_transaction: null,
     max_transaction: null,
+    modifiers: [],
     variants: [
       {
         name: "Sharing",
@@ -209,7 +254,9 @@ export const items = [
         variants: [],
         min_transaction: null,
         max_transaction: null,
+        modifiers: [],
       },
+
       {
         name: "Platter",
         category: "Main Dish",
@@ -220,6 +267,7 @@ export const items = [
         variants: [],
         min_transaction: null,
         max_transaction: null,
+        modifiers: [],
       },
     ],
   },
@@ -234,6 +282,7 @@ export const items = [
     price: null,
     min_transaction: null,
     max_transaction: null,
+    modifiers: [],
     variants: [
       {
         name: "Solo",
@@ -245,7 +294,9 @@ export const items = [
         variants: [],
         min_transaction: null,
         max_transaction: null,
+        modifiers: [],
       },
+
       {
         name: "Platter",
         category: "Fried Rice",
@@ -256,6 +307,7 @@ export const items = [
         variants: [],
         min_transaction: null,
         max_transaction: null,
+        modifiers: [],
       },
     ],
   },
@@ -271,6 +323,7 @@ export const items = [
     price: null,
     min_transaction: null,
     max_transaction: null,
+    modifiers: [],
     variants: [
       {
         name: "Solo",
@@ -282,7 +335,9 @@ export const items = [
         variants: [],
         min_transaction: null,
         max_transaction: null,
+        modifiers: [],
       },
+
       {
         name: "Platter",
         category: "Fried Rice",
@@ -293,6 +348,7 @@ export const items = [
         variants: [],
         min_transaction: null,
         max_transaction: null,
+        modifiers: [],
       },
     ],
   },
@@ -307,6 +363,7 @@ export const items = [
     price: null,
     min_transaction: null,
     max_transaction: null,
+    modifiers: [],
     variants: [
       {
         name: "Solo",
@@ -318,7 +375,9 @@ export const items = [
         variants: [],
         min_transaction: null,
         max_transaction: null,
+        modifiers: [],
       },
+
       {
         name: "Platter",
         category: "Fried Rice",
@@ -329,6 +388,7 @@ export const items = [
         variants: [],
         min_transaction: null,
         max_transaction: null,
+        modifiers: [],
       },
     ],
   },
@@ -345,6 +405,7 @@ export const items = [
     price: 178,
     min_transaction: null,
     max_transaction: null,
+    modifiers: [],
     variants: [],
   },
   {
@@ -358,6 +419,7 @@ export const items = [
     price: 198,
     min_transaction: null,
     max_transaction: null,
+    modifiers: [],
     variants: [],
   },
   {
@@ -371,6 +433,7 @@ export const items = [
     price: 248,
     min_transaction: null,
     max_transaction: null,
+    modifiers: [],
     variants: [],
   },
   {
@@ -383,6 +446,7 @@ export const items = [
     price: 178,
     min_transaction: null,
     max_transaction: null,
+    modifiers: [],
     variants: [],
   },
   {
@@ -395,6 +459,7 @@ export const items = [
     price: 178,
     min_transaction: null,
     max_transaction: null,
+    modifiers: [],
     variants: [],
   },
   {
@@ -408,6 +473,7 @@ export const items = [
     price: null,
     min_transaction: null,
     max_transaction: null,
+    modifiers: [],
     variants: [
       {
         name: "Century Egg Congee with Pork",
@@ -421,7 +487,9 @@ export const items = [
         variants: [],
         min_transaction: null,
         max_transaction: null,
+        modifiers: [],
       },
+
       {
         name: "Century Egg Congee with Beef",
         category: "Noodle Soup",
@@ -434,6 +502,7 @@ export const items = [
         variants: [],
         min_transaction: null,
         max_transaction: null,
+        modifiers: [],
       },
     ],
   },
@@ -448,6 +517,7 @@ export const items = [
     price: 148,
     min_transaction: null,
     max_transaction: null,
+    modifiers: [],
     variants: [],
   },
   {
@@ -460,6 +530,7 @@ export const items = [
     },
     min_transaction: null,
     max_transaction: null,
+    modifiers: [],
     variants: [
       {
         name: "Asado",
@@ -471,7 +542,9 @@ export const items = [
         variants: [],
         min_transaction: null,
         max_transaction: null,
+        modifiers: [],
       },
+
       {
         name: "Bola-Bola",
         category: "Noodle Soup",
@@ -482,6 +555,7 @@ export const items = [
         variants: [],
         min_transaction: null,
         max_transaction: null,
+        modifiers: [],
       },
     ],
   },
@@ -496,6 +570,7 @@ export const items = [
     price: 98,
     min_transaction: null,
     max_transaction: null,
+    modifiers: [],
     variants: [],
   },
   {
@@ -508,6 +583,7 @@ export const items = [
     price: 148,
     min_transaction: null,
     max_transaction: null,
+    modifiers: [],
     variants: [],
   },
   {
@@ -518,6 +594,34 @@ export const items = [
     translation: {
       cn: "炸雞",
     },
+    modifiers: [
+      {
+        name: "Add Chilli Garlic",
+        items: [
+          {
+            name: "Yes",
+            price: 0,
+          },
+          {
+            name: "Extra Chilli Garlic - 2oz",
+            price: 10,
+          },
+        ],
+      },
+      {
+        name: "Add-Ons",
+        items: [
+          {
+            name: "Steamed Rice",
+            price: 28,
+          },
+          {
+            name: "Egg Fried Rice",
+            price: 48,
+          },
+        ],
+      },
+    ],
     price: 98,
     min_transaction: null,
     max_transaction: null,
@@ -533,6 +637,7 @@ export const items = [
     price: 148,
     min_transaction: null,
     max_transaction: null,
+    modifiers: [],
     variants: [],
   },
 ];
