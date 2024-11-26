@@ -35,7 +35,7 @@
 		  To: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
 	  -->
         <div
-          class="relative bg-white overflow-visible  rounded-lg text-left shadow-xl transform transition-all sm:my-8 sm:max-w-lg sm:w-full"
+          class="relative bg-white overflow-visible  rounded-lg text-left shadow-xl transform transition-all sm:my-8 sm:max-w-lg sm:w-full w-full"
         >
           <div class="flex justify-between px-5 pt-4">
             <div>
