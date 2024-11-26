@@ -190,7 +190,10 @@ const cart = ref([]);
 
 try {
   let storedCart = JSON.parse(localStorage.getItem("cart"));
-  cart.value = storedCart;
+
+  if (storedCart != null) {
+    cart.value = storedCart;
+  }
 } catch (error) {
   localStorage.removeItem("cart");
   cart.value = [];
