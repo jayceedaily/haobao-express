@@ -189,7 +189,8 @@ const showCart = ref(false);
 const cart = ref([]);
 
 try {
-  cart.value = JSON.parse(localStorage.getItem("cart"));
+  let storedCart = JSON.parse(localStorage.getItem("cart"));
+  cart.value = storedCart;
 } catch (error) {
   localStorage.removeItem("cart");
   cart.value = [];
