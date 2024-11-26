@@ -136,6 +136,7 @@ const items = [
     price: null,
     min_transaction: null,
     max_transaction: null,
+    tags: ['BEST SELLER'],
     variants: [
       {
         name: "4PC Boneless Fried Chicken",
@@ -182,6 +183,7 @@ const items = [
     name: "Char Siu (Pork Asado)",
     category: "Main Dish",
     image: "./items/compressed/charsiu.png",
+    tags: ['NEW'],
     translation: {
       cn: "炸雞",
     },
@@ -194,6 +196,7 @@ const items = [
     name: "Salt & Pepper Pork",
     category: "Main Dish",
     image: "./items/compressed/salt-and-pepper-pork.png",
+    tags: ['BEST SELLER'],
     translation: {
       cn: "炸雞",
     },
@@ -218,6 +221,7 @@ const items = [
     name: "Stir-Fried Bok Choy",
     category: "Main Dish",
     image: "./items/compressed/bokchoy.png",
+    tags: ['BEST SELLER'],
     translation: {
       cn: "炸雞",
     },
@@ -277,6 +281,7 @@ const items = [
     name: "Shanghai Roll",
     category: "Main Dish",
     image: "./items/compressed/shanghai.png",
+    tags: ['BEST SELLER'],
     translation: {
       cn: "炸雞",
     },
@@ -386,6 +391,7 @@ const items = [
     name: "Yang Chow",
     category: "Fried Rice",
     image: "./items/compressed/yangchow.png",
+    tags: ['BEST SELLER'],
     translation: {
       cn: "炸雞",
     },
@@ -472,6 +478,7 @@ const items = [
     name: "Taiwanese Braised Beef Mami",
     category: "Noodle Soup",
     image: "./items/compressed/braised-beef-mami.png",
+    tags: ['BEST SELLER'],
     translation: {
       cn: "炸雞",
     },
@@ -484,6 +491,7 @@ const items = [
     name: "Beef Wonton Mami",
     category: "Noodle Soup",
     image: "./items/compressed/beef-wonton-mami.png",
+    tags: ['BEST SELLER'],
     translation: {
       cn: "炸雞",
     },
@@ -520,6 +528,7 @@ const items = [
     name: "Century Egg Congee",
     category: "Noodle Soup",
     image: "./items/compressed/congee.png",
+    tags: ['NEW'],
     translation: {
       cn: "炸雞",
     },
@@ -528,7 +537,7 @@ const items = [
     max_transaction: null,
     variants: [
       {
-        name: "Pork",
+        name: "Century Egg Congee with Pork",
         category: "Noodle Soup",
         image: "./items/compressed/congee.png",
 
@@ -541,7 +550,7 @@ const items = [
         max_transaction: null,
       },
       {
-        name: "Beef",
+        name: "Century Egg Congee with Beef",
         category: "Noodle Soup",
         image: "./items/compressed/congee.png",
 
@@ -572,6 +581,7 @@ const items = [
     name: "Siopao",
     category: "Dimsum",
     image: "./items/compressed/siopao.png",
+    tags: ['BEST SELLER'],
     translation: {
       cn: "炸雞",
     },
@@ -606,6 +616,7 @@ const items = [
     name: "Dry Wonton",
     category: "Dimsum",
     image: "./items/compressed/dry-wonton.png",
+    tags: ['BEST SELLER'],
     translation: {
       cn: "炸雞",
     },
@@ -630,6 +641,7 @@ const items = [
     name: "Pork Shumai",
     category: "Dimsum",
     image: "./items/compressed/siomai.png",
+    tags: ['BEST SELLER'],
     translation: {
       cn: "炸雞",
     },

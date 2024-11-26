@@ -1,11 +1,15 @@
 <template>
   <div>
     <div class="relative">
-      <!-- <div
-        class="absolute right-10 text-white text-xs bg-primary font-bold px-3 py-1 rounded-full"
-      >
-        BEST SELLER
-      </div> -->
+      <div class="absolute right-10 flex flex-col">
+        <div
+          v-for="(tag, index) in item.tags"
+          :key="index"
+          class="text-white text-xs bg-primary font-bold px-3 py-1 rounded-full mb-1 flex shadow-xl"
+        >
+          {{ tag }}
+        </div>
+      </div>
       <div class="max-w-[350px] max-h-[200px]">
         <img :src="item.image" class="max-h-[200px] mx-auto" />
       </div>
