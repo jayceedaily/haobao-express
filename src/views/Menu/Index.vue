@@ -130,10 +130,11 @@
           </div>
         </button>
       </div>
-      <div class="flex gap-3 justify-end whitespace-nowrap">
+      <div class="flex gap-3 overflow-x-scroll whitespace-nowrap">
+        
         <button
           :key="index"
-          class="font-medium px-3 py-1 rounded-full uppercase text-sm"
+          class="font-medium px-3 py-1 rounded-full uppercase text-xs"
           @click="filter = null"
           :class="
             filter == null
@@ -146,7 +147,7 @@
         <button
           v-for="(category, index) in categories"
           :key="index"
-          class="font-medium px-3 py-1 rounded-full uppercase text-sm"
+          class="font-medium px-3 py-1 rounded-full uppercase text-xs"
           :class="
             filter == category
               ? 'bg-primary text-white'
