@@ -1,5 +1,25 @@
 <template>
-  {{ cart.length }}
+  <div class="flex w-full justify-end px-5">
+    <button @click="showCart = true">
+      <div class="relative w-12 h-12">
+        <div
+          class="absolute text-xs px-3 py-2 bg-primary shadow-md text-white rounded-full right-0 font-bold"
+        >
+          {{ cart.length }}
+        </div>
+
+        <ShoppingBagIcon class="text-primary h-12 w-12" />
+      </div>
+    </button>
+  </div>
+
+  <cart-modal
+    v-if="showCart"
+    @close="showCart = false"
+    :cart="cart"
+    @delete="handleDelete"
+  />
+
   <hb-modal
     v-if="selectedItem"
     :title="selectedItem.name"
@@ -72,9 +92,7 @@
                 (selectedItem = null)
             "
           >
-            ₱{{
-              (selectedItem.price * selectedItem.quantity).toLocaleString()
-            }}
+            ₱{{ (selectedItem.price * selectedItem.quantity).toLocaleString() }}
             - Add to Basket
           </button>
         </div>
@@ -104,6 +122,8 @@
 import { ref } from "vue";
 import HbModal from "../../components/HbModal.vue";
 import ProductCard from "./Partials/ProductCard.vue";
+import { ShoppingBagIcon } from "@heroicons/vue/24/outline";
+import CartModal from "./Partials/CartModal.vue";
 
 const items = [
   {
@@ -120,6 +140,8 @@ const items = [
       {
         name: "4PC Boneless Fried Chicken",
         category: "Main Dish",
+        image: "./items/compressed/4pc.png",
+
         translation: {
           cn: "炸雞",
         },
@@ -131,6 +153,8 @@ const items = [
       {
         name: "6PC Boneless Fried Chicken",
         category: "Main Dish",
+        image: "./items/compressed/6pc.png",
+
         translation: {
           cn: "炸雞",
         },
@@ -142,6 +166,8 @@ const items = [
       {
         name: "Boneless Fried Chicken Bulk",
         category: "Main Dish",
+        image: "./items/compressed/8pc.png",
+
         translation: {
           cn: "炸雞",
         },
@@ -259,7 +285,7 @@ const items = [
     max_transaction: null,
     variants: [
       {
-        name: "6PC",
+        name: "6PC Shanghai Roll",
         category: "Main Dish",
         translation: {
           cn: "炸雞",
@@ -270,12 +296,13 @@ const items = [
         max_transaction: null,
       },
       {
-        name: "18PC",
+        name: "18PC Shanghai Roll",
         category: "Main Dish",
+        image: "./items/compressed/shanghai.png",
         translation: {
           cn: "炸雞",
         },
-        price: 268,
+        price: 278,
         variants: [],
         min_transaction: null,
         max_transaction: null,
@@ -503,6 +530,8 @@ const items = [
       {
         name: "Pork",
         category: "Noodle Soup",
+        image: "./items/compressed/congee.png",
+
         translation: {
           cn: "炸雞",
         },
@@ -514,6 +543,8 @@ const items = [
       {
         name: "Beef",
         category: "Noodle Soup",
+        image: "./items/compressed/congee.png",
+
         translation: {
           cn: "炸雞",
         },
@@ -623,5 +654,15 @@ const items = [
 
 const selectedItem = ref(null);
 
+const showCart = ref(false);
+
 const cart = ref([]);
+
+const handleDelete = (index) => {
+  console.log(index);
+
+  cart.value = cart.value.filter((item, i) => {
+    return i != index;
+  });
+};
 </script>

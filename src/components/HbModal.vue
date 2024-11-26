@@ -50,7 +50,7 @@
 				</button>
 			  </div>
 			</div>
-			<div class="bg-white px-5 pb-5 dark:bg-gray-900 overflow-visible">
+			<div class="bg-white px-5 pb-5 dark:bg-gray-900 overflow-visible rounded-b-lg">
 			  <slot name="content" />
 			</div>
 		  </div>
