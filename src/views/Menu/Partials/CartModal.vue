@@ -9,8 +9,12 @@
             class="border-b"
             :class="item.quantity == 0 ? 'bg-gray-100' : ''"
           >
-            <td class="align-center w-20 py-2 px-2">
-              <img :src="item.item.image" class="" />
+            <td class="w-20 py-5 px-5 align-top">
+              <span
+                class="inline text-primary font-medium px-2 py-1 rounded-lg border-2 border-primary"
+              >
+                ×{{ item.quantity }}
+              </span>
             </td>
             <td class="py-2">
               <div :class="item.quantity == 0 ? 'line-through' : ''">
