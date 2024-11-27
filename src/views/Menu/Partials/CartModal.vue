@@ -2,14 +2,14 @@
   <hb-modal title="My Cart" no-padding>
     <template #content>
       <div class="flex flex-col gap-5">
-        <table>
+        <table class="mb-5">
           <tr
             v-for="(item, index) in cart"
             :key="index"
-            class=""
+            class="border-b"
             :class="item.quantity == 0 ? 'bg-gray-100' : ''"
           >
-            <td class="align-top w-20 py-2 px-2">
+            <td class="align-center w-20 py-2 px-2">
               <img :src="item.item.image" class="" />
             </td>
             <td class="py-2">
@@ -74,7 +74,7 @@
           </tr>
         </table>
       </div>
-      <hr class="my-5" />
+
       <div class="px-5 pb-5">
         <div v-if="cart.length == 0">Your Cart is Empty</div>
         <div v-else class="flex flex-col gap-3">

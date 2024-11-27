@@ -5,115 +5,12 @@
     :cart="cart"
     @delete="handleDelete"
   />
-
-  <hb-modal
+  <selected-modal
     v-if="selectedItem"
-    :title="selectedItem.name"
+    :selectedItem="selectedItem"
+    @addToCart="handleAddToCart"
     @close="selectedItem = null"
-  >
-    <template #content>
-      <div v-if="selectedItem.variants.length" class="flex flex-col gap-5">
-        <div
-          v-for="(variant, index) in selectedItem.variants"
-          :key="index"
-          class="flex justify-between"
-        >
-          <div class="flex gap-3">
-            <img :src="variant.image" class="w-12" />
-            <div>
-              <div class="font-medium text-lg">
-                {{ variant.name }}
-              </div>
-              <div v-if="variant.min_transaction" class="text-sm text-gray-400">
-                Minimum Order of {{ variant.min_transaction }}
-              </div>
-              ₱{{ variant.price }}
-            </div>
-          </div>
-          <div>
-            <button
-              class="rounded-xl font-medium bg-primary text-white py-2 px-6"
-              @click="
-                () =>
-                  (selectedItem = {
-                    ...variant,
-                    quantity: variant.min_transaction ?? 1,
-                  })
-              "
-            >
-              Select
-            </button>
-          </div>
-        </div>
-      </div>
-      <div v-else class="flex flex-col gap-3">
-        <img :src="selectedItem.image" />
-        <div
-          v-if="selectedItem.modifiers.length"
-          class="flex flex-col gap-5 mb-5"
-        >
-          <div v-for="(modifier, index) in selectedItem.modifiers" :key="index">
-            <div>
-              <div class="font-medium mb-3">
-                {{ modifier.name }}
-              </div>
-              <div class="flex flex-col gap-3">
-                <button
-                  v-for="(option, _index) in modifier.items"
-                  class="text-left px-5 py-2 rounded-lg border flex justify-between"
-                  :class="option.selected ? 'bg-gray-100' : ''"
-                  @click="option.selected = !option.selected"
-                  :key="_index"
-                >
-                  <div>
-                    {{ option.name }}
-                  </div>
-                  <div class="text-gray-400">+₱{{ option.price }}</div>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="flex justify-between">
-          <div class="flex">
-            <div class="flex">
-              <button
-                class="rounded-l-xl font-medium bg-primary text-white py-1 px-3"
-                @click="selectedItem.quantity--"
-              >
-                -
-              </button>
-              <input
-                type="number"
-                class="border px-2 w-[50px] text-center center"
-                :min="selectedItem.min_transaction ?? 1"
-                v-model="selectedItem.quantity"
-              />
-              <button
-                class="rounded-r-xl font-medium bg-primary text-white py-1 px-3"
-                @click="selectedItem.quantity++"
-              >
-                +
-              </button>
-            </div>
-          </div>
-          <button
-            class="rounded-xl font-medium bg-primary text-white py-2 px-6"
-            @click="
-              cart.push({
-                quantity: selectedItem.quantity ?? 1,
-                item: selectedItem,
-              }),
-                (selectedItem = null)
-            "
-          >
-            ₱{{ (selectedItem.price * selectedItem.quantity).toLocaleString() }}
-            - Add to Basket
-          </button>
-        </div>
-      </div>
-    </template>
-  </hb-modal>
+  />
 
   <div class="max-w-4xl mx-auto flex gap-10 flex-col pb-20 px-3">
     <div class="flex justify-between">
@@ -179,6 +76,7 @@ import ProductCard from "./Partials/ProductCard.vue";
 import { ShoppingBagIcon } from "@heroicons/vue/24/outline";
 import CartModal from "./Partials/CartModal.vue";
 import { items as itemsJson } from "./Partials/items";
+import SelectedModal from "./Partials/SelectedModal.vue";
 
 const items = itemsJson;
 
@@ -187,6 +85,11 @@ const selectedItem = ref(null);
 const showCart = ref(false);
 
 const cart = ref([]);
+
+const handleAddToCart = (item) => {
+  cart.value.push(item);
+  selectedItem.value = null;
+};
 
 try {
   let storedCart = JSON.parse(localStorage.getItem("cart"));
