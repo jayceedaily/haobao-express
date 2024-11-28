@@ -44,7 +44,7 @@
                     class="px-3 py-1 bg-gray-200 text-gray-500 rounded-lg font-medium h-full"
                     @click="item.quantity++"
                   >
-                    <XMarkIcon class="w-4 h-4" />
+                    <ArrowLeftIcon class="w-4 h-4" />
                   </button>
                   <button
                     class="px-3 py-1 bg-red-100 text-red-500 rounded-lg font-medium h-full"
@@ -110,7 +110,7 @@
 import { computed } from "vue";
 import HbModal from "../../../components/HbModal.vue";
 import { MinusIcon, PlusIcon } from "@heroicons/vue/24/outline";
-import { TrashIcon, XMarkIcon } from "@heroicons/vue/24/solid";
+import { TrashIcon, ArrowLeftIcon } from "@heroicons/vue/24/solid";
 
 const props = defineProps({
   cart: {
