@@ -627,6 +627,7 @@ export const items = [
     modifiers: [
       {
         name: "Add Chilli Garlic",
+        max_selected: 1,
         items: [
           {
             name: "Yes",
@@ -640,6 +641,7 @@ export const items = [
       },
       {
         name: "Add-Ons",
+        max_selected: 1,
         items: [
           {
             name: "Steamed Rice",
