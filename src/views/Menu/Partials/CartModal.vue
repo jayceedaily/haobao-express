@@ -55,6 +55,9 @@
                 </div>
               </div>
               <div v-else class="flex flex-col items-center">
+                <!-- <div>
+                  <input type="range" v-model="item.quantity"/>
+                </div> -->
                 <div class="flex gap-2">
                   <button
                     class="bg-gray-200 px-2 rounded-full"

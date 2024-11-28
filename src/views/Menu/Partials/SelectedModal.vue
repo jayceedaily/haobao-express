@@ -13,6 +13,7 @@
               <div class="font-medium text-lg">
                 {{ variant.name }}
               </div>
+              <div></div>
               <div v-if="variant.min_transaction" class="text-sm text-gray-400">
                 Minimum Order of {{ variant.min_transaction }}
               </div>
@@ -37,6 +38,30 @@
       </div>
       <div v-else class="flex flex-col gap-3">
         <img :src="localSelectedItem.image" />
+        <div class="text-gray-500">
+          {{ localSelectedItem.description }}
+        </div>
+        <div class="flex mx-auto">
+          <button
+            class="rounded-l-xl font-medium bg-primary text-white py-1 px-3"
+            @click="localSelectedItem.quantity--"
+            :disabled="localSelectedItem.quantity == 1"
+          >
+            -
+          </button>
+          <input
+            type="number"
+            class="border px-2 w-[50px] text-center center appearance-none"
+            :min="localSelectedItem.min_transaction ?? 1"
+            v-model="localSelectedItem.quantity"
+          />
+          <button
+            class="rounded-r-xl font-medium bg-primary text-white py-1 px-3"
+            @click="localSelectedItem.quantity++"
+          >
+            +
+          </button>
+        </div>
         <div
           v-if="localSelectedItem.modifiers.length"
           class="flex flex-col gap-5 mb-5"
@@ -67,34 +92,12 @@
           </div>
         </div>
         <div class="flex justify-between">
-          <div class="flex">
-            <div class="flex">
-              <button
-                class="rounded-l-xl font-medium bg-primary text-white py-1 px-3"
-                @click="localSelectedItem.quantity--"
-              >
-                -
-              </button>
-              <input
-                type="number"
-                class="border px-2 w-[50px] text-center center"
-                :min="localSelectedItem.min_transaction ?? 1"
-                v-model="localSelectedItem.quantity"
-              />
-              <button
-                class="rounded-r-xl font-medium bg-primary text-white py-1 px-3"
-                @click="localSelectedItem.quantity++"
-              >
-                +
-              </button>
-            </div>
-          </div>
+          <div class="flex text-gray-400 font-base px-5">₱{{ getProductTotal() }}</div>
           <button
             class="rounded-xl font-medium bg-primary text-white py-2 px-6"
             @click="handleAddToCart"
           >
-            ₱{{ getProductTotal() }}
-            - Add to Basket
+            Add to Basket
           </button>
         </div>
       </div>
@@ -138,3 +141,16 @@ const getProductTotal = () => {
   return total;
 };
 </script>
+
+<style>
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+</style>

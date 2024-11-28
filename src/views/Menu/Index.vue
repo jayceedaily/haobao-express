@@ -13,6 +13,11 @@
   />
 
   <div class="max-w-4xl mx-auto flex gap-10 flex-col pb-20 px-3">
+
+    <div class="bg-red-100 text-red-500 px-10 py-10 font-bold text-center rounded-lg text-xl border-red-500 border-2">
+      THIS PAGE IS NOT FOR CUSTOMER USE AND IS FOR DEV TESTING ONLY
+    </div>
+
     <div class="flex justify-between">
       <div class="flex w-full px-5">
         <button @click="showCart = true">

@@ -3,6 +3,7 @@ export const items = [
     name: "Boneless Fried Chicken",
     category: "Main Dish",
     image: "./items/compressed/6pc.png",
+    description: null,
     translation: {
       cn: "炸雞",
     },
@@ -16,6 +17,7 @@ export const items = [
         name: "4PC Boneless Fried Chicken",
         category: "Main Dish",
         image: "./items/compressed/4pc.png",
+        description: "Crispy Boneless Fried Chicken brined overnight for maximum flavor, with your sauce of choice (or none, its goods anyways)",
 
         translation: {
           cn: "炸雞",
@@ -27,6 +29,7 @@ export const items = [
         modifiers: [
           {
             name: "Sauce Flavor",
+            max_selected: 1,
             items: [
               {
                 name: "Hao Bao Original",
@@ -56,6 +59,7 @@ export const items = [
         name: "6PC Boneless Fried Chicken",
         category: "Main Dish",
         image: "./items/compressed/6pc.png",
+        description: null,
 
         translation: {
           cn: "炸雞",
@@ -71,6 +75,7 @@ export const items = [
         name: "Boneless Fried Chicken Bulk",
         category: "Main Dish",
         image: "./items/compressed/8pc.png",
+        description: null,
 
         translation: {
           cn: "炸雞",
@@ -87,6 +92,7 @@ export const items = [
     name: "Char Siu (Pork Asado)",
     category: "Main Dish",
     image: "./items/compressed/charsiu.png",
+    description: null,
     tags: ["NEW"],
     translation: {
       cn: "炸雞",
@@ -101,6 +107,7 @@ export const items = [
     name: "Salt & Pepper Pork",
     category: "Main Dish",
     image: "./items/compressed/salt-and-pepper-pork.png",
+    description: null,
     tags: ["BEST SELLER"],
     translation: {
       cn: "炸雞",
@@ -115,6 +122,7 @@ export const items = [
     name: "Beef Brocolli",
     category: "Main Dish",
     image: "./items/compressed/beef-brocolli.png",
+    description: null,
     translation: {
       cn: "炸雞",
     },
@@ -128,6 +136,7 @@ export const items = [
     name: "Stir-Fried Bok Choy",
     category: "Main Dish",
     image: "./items/compressed/bokchoy.png",
+    description: null,
     tags: ["BEST SELLER"],
     translation: {
       cn: "炸雞",
@@ -142,6 +151,7 @@ export const items = [
     name: "Sweet & Sour Pork",
     category: "Main Dish",
     image: "./items/compressed/sweet-and-sour-pork.png",
+    description: null,
     translation: {
       cn: "炸雞",
     },
@@ -181,6 +191,7 @@ export const items = [
     name: "Soy Garlic Kangkong",
     category: "Main Dish",
     image: "./items/compressed/kangkong.png",
+    description: null,
     translation: {
       cn: "炸雞",
     },
@@ -194,6 +205,7 @@ export const items = [
     name: "Shanghai Roll",
     category: "Main Dish",
     image: "./items/compressed/shanghai.png",
+    description: null,
     tags: ["BEST SELLER"],
     translation: {
       cn: "炸雞",
@@ -220,6 +232,7 @@ export const items = [
         name: "18PC Shanghai Roll",
         category: "Main Dish",
         image: "./items/compressed/shanghai.png",
+        description: null,
         translation: {
           cn: "炸雞",
         },
@@ -236,6 +249,7 @@ export const items = [
     name: "Szechuan Pork",
     category: "Main Dish",
     image: "./items/compressed/szechuan-pork.png",
+    description: null,
     translation: {
       cn: "炸雞",
     },
@@ -276,6 +290,7 @@ export const items = [
     name: "Shrimp Chao Fan",
     category: "Fried Rice",
     image: "./items/compressed/shrimp-chao-fan.png",
+    description: null,
     translation: {
       cn: "炸雞",
     },
@@ -316,6 +331,7 @@ export const items = [
     name: "Yang Chow",
     category: "Fried Rice",
     image: "./items/compressed/yangchow.png",
+    description: null,
     tags: ["BEST SELLER"],
     translation: {
       cn: "炸雞",
@@ -357,6 +373,7 @@ export const items = [
     name: "Pork Chao Fan",
     category: "Fried Rice",
     image: "./items/compressed/pork-chao-fan.png",
+    description: null,
     translation: {
       cn: "炸雞",
     },
@@ -399,6 +416,7 @@ export const items = [
     name: "Wonton Mami",
     category: "Noodle Soup",
     image: "./items/compressed/wonton-mami.png",
+    description: null,
     translation: {
       cn: "炸雞",
     },
@@ -412,6 +430,7 @@ export const items = [
     name: "Taiwanese Braised Beef Mami",
     category: "Noodle Soup",
     image: "./items/compressed/braised-beef-mami.png",
+    description: null,
     tags: ["BEST SELLER"],
     translation: {
       cn: "炸雞",
@@ -426,6 +445,7 @@ export const items = [
     name: "Beef Wonton Mami",
     category: "Noodle Soup",
     image: "./items/compressed/beef-wonton-mami.png",
+    description: null,
     tags: ["BEST SELLER"],
     translation: {
       cn: "炸雞",
@@ -440,6 +460,7 @@ export const items = [
     name: "Beef Mami",
     category: "Noodle Soup",
     image: "./items/compressed/beef-mami.png",
+    description: null,
     translation: {
       cn: "炸雞",
     },
@@ -453,6 +474,7 @@ export const items = [
     name: "Wonton Soup",
     category: "Noodle Soup",
     image: "./items/compressed/wonton-soup.png",
+    description: null,
     translation: {
       cn: "炸雞",
     },
@@ -466,6 +488,7 @@ export const items = [
     name: "Century Egg Congee",
     category: "Noodle Soup",
     image: "./items/compressed/congee.png",
+    description: null,
     tags: ["NEW"],
     translation: {
       cn: "炸雞",
@@ -479,6 +502,7 @@ export const items = [
         name: "Century Egg Congee with Pork",
         category: "Noodle Soup",
         image: "./items/compressed/congee.png",
+        description: null,
 
         translation: {
           cn: "炸雞",
@@ -494,6 +518,7 @@ export const items = [
         name: "Century Egg Congee with Beef",
         category: "Noodle Soup",
         image: "./items/compressed/congee.png",
+        description: null,
 
         translation: {
           cn: "炸雞",
@@ -511,6 +536,7 @@ export const items = [
     name: "Sharks Fin",
     category: "Dimsum",
     image: "./items/compressed/sharks-fin.png",
+    description: null,
     translation: {
       cn: "炸雞",
     },
@@ -524,6 +550,7 @@ export const items = [
     name: "Siopao",
     category: "Dimsum",
     image: "./items/compressed/siopao.png",
+    description: null,
     tags: ["BEST SELLER"],
     translation: {
       cn: "炸雞",
@@ -563,6 +590,7 @@ export const items = [
     name: "Dry Wonton",
     category: "Dimsum",
     image: "./items/compressed/dry-wonton.png",
+    description: null,
     tags: ["BEST SELLER"],
     translation: {
       cn: "炸雞",
@@ -577,6 +605,7 @@ export const items = [
     name: "Pork Bean Curd Roll",
     category: "Dimsum",
     image: "./items/compressed/pork-bean-curd-roll.png",
+    description: null,
     translation: {
       cn: "炸雞",
     },
@@ -590,6 +619,7 @@ export const items = [
     name: "Pork Shumai",
     category: "Dimsum",
     image: "./items/compressed/siomai.png",
+    description: null,
     tags: ["BEST SELLER"],
     translation: {
       cn: "炸雞",
@@ -631,6 +661,7 @@ export const items = [
     name: "Chicken Feet",
     category: "Dimsum",
     image: "./items/compressed/chicken-feet.png",
+    description: null,
     translation: {
       cn: "炸雞",
     },
