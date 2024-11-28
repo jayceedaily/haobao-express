@@ -71,8 +71,13 @@
             :key="index"
           >
             <div>
-              <div class="font-medium mb-3">
-                {{ modifier.name }}
+              <div class="mb-3">
+                <div class="font-medium">
+                  {{ modifier.name }}
+                </div>
+                <div v-if="modifier.max_selected" class="text-gray-400">
+                  Select at least {{ modifier.max_selected }}
+                </div>
               </div>
               <div class="flex flex-col gap-3">
                 <button
@@ -80,6 +85,12 @@
                   class="text-left px-5 py-2 rounded-lg border flex justify-between"
                   :class="option.selected ? 'bg-gray-100' : ''"
                   @click="option.selected = !option.selected"
+                  :disabled="
+                    modifier.max_selected ==
+                      modifier.items.filter(
+                        (modifierItem) => modifierItem.selected
+                      ).length && !option.selected
+                  "
                   :key="_index"
                 >
                   <div>
@@ -92,7 +103,9 @@
           </div>
         </div>
         <div class="flex justify-between">
-          <div class="flex text-gray-400 font-base px-5">₱{{ getProductTotal() }}</div>
+          <div class="flex text-gray-400 font-base px-5">
+            ₱{{ getProductTotal() }}
+          </div>
           <button
             class="rounded-xl font-medium bg-primary text-white py-2 px-6"
             @click="handleAddToCart"
@@ -106,7 +119,7 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { computed, ref } from "vue";
 import HbModal from "../../../components/HbModal.vue";
 
 const props = defineProps({
