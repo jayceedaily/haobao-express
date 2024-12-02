@@ -1,11 +1,14 @@
 <template>
-  <div>
+  <button
+    class="flex items-center border rounded-lg py-3"
+    @click="handleAddToBasket"
+  >
     <div class="relative">
       <div class="absolute top-[-20px] flex flex-col">
         <div
           v-for="(tag, index) in item.tags"
           :key="index"
-          class="text-white bg-primary font-medium text-base px-3 py-1 rounded-full mb-1 flex shadow-x "
+          class="text-white bg-primary font-medium text-base px-3 py-1 rounded-full mb-1 flex shadow-x"
         >
           {{ tag }}
         </div>
@@ -24,15 +27,15 @@
       </div>
 
       <div>
-        <button
+        <!-- <button
           class="rounded-xl font-medium bg-primary text-white py-2 px-6"
           @click="handleAddToBasket"
         >
           Add to Basket
-        </button>
+        </button> -->
       </div>
     </div>
-  </div>
+  </button>
 </template>
 
 <script setup>

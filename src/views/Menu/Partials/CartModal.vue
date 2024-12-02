@@ -59,7 +59,8 @@
                   <input type="range" v-model="item.quantity"/>
                 </div> -->
                 <div class="flex gap-2">
-                  <button
+                  <button class="text-emerald-700 font-medium" @click="handleEdit(index, item)">EDIT</button>
+                  <!-- <button
                     class="bg-gray-200 px-2 rounded-full"
                     @click="item.quantity--"
                   >
@@ -71,7 +72,7 @@
                     @click="item.quantity++"
                   >
                     <PlusIcon class="h-3 w-3" />
-                  </button>
+                  </button> -->
                 </div>
                 <div class="text-gray-400">
                   ₱{{ getProductTotal(item).toLocaleString() }}
@@ -118,7 +119,7 @@ const props = defineProps({
   },
 });
 
-const emit = defineEmits(["delete"]);
+const emit = defineEmits(["delete", "edit"]);
 
 const cartTotal = computed(() => {
   let total = 0;
@@ -146,6 +147,10 @@ const getProductTotal = (product) => {
 
 const handleDelete = (index) => {
   emit("delete", index);
+};
+
+const handleEdit = (index, item) => {
+  emit("edit", { index, item });
 };
 </script>
 

@@ -4,17 +4,23 @@
     @close="showCart = false"
     :cart="cart"
     @delete="handleDelete"
+    @edit="handleEdit"
   />
   <selected-modal
     v-if="selectedItem"
     :selectedItem="selectedItem"
     @addToCart="handleAddToCart"
-    @close="selectedItem = null"
+    @close="(selectedItem = null), (indexEditing = null)"
+    :isEditing="indexEditing != null"
+    @delete="
+      handleDelete(indexEditing), (selectedItem = null), (indexEditing = null)
+    "
   />
 
   <div class="max-w-4xl mx-auto flex gap-10 flex-col pb-20 px-3">
-
-    <div class="bg-red-100 text-red-500 px-10 py-10 font-bold text-center rounded-lg text-xl border-red-500 border-2">
+    <div
+      class="bg-red-100 text-red-500 px-10 py-10 font-bold text-center rounded-lg text-xl border-red-500 border-2"
+    >
       THIS PAGE IS NOT FOR CUSTOMER USE AND IS FOR DEV TESTING ONLY
     </div>
 
@@ -59,7 +65,7 @@
         </button>
       </div>
     </div>
-    <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-y-20 gap-2">
+    <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-2">
       <product-card
         v-for="(item, index) in filteredItems"
         :key="index"
@@ -92,7 +98,12 @@ const showCart = ref(false);
 const cart = ref([]);
 
 const handleAddToCart = (item) => {
-  cart.value.push(item);
+  if (indexEditing.value === null) {
+    cart.value.push(item);
+  } else {
+    cart.value[indexEditing.value] = item;
+  }
+  indexEditing.value = null;
   selectedItem.value = null;
 };
 
@@ -122,6 +133,13 @@ const handleDelete = (index) => {
   cart.value = cart.value.filter((item, i) => {
     return i != index;
   });
+};
+
+const indexEditing = ref(null);
+
+const handleEdit = ({ index, item }) => {
+  indexEditing.value = index;
+  selectedItem.value = { ...item.item, quantity: item.quantity };
 };
 
 const filter = ref(null);

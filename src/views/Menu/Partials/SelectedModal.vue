@@ -102,16 +102,25 @@
             </div>
           </div>
         </div>
-        <div class="flex justify-between">
+        <div class="flex justify-between items-center">
           <div class="flex text-gray-400 font-base px-5">
             ₱{{ getProductTotal() }}
           </div>
-          <button
-            class="rounded-xl font-medium bg-primary text-white py-2 px-6"
-            @click="handleAddToCart"
-          >
-            Add to Basket
-          </button>
+          <div class="flex gap-3">
+            <button
+              class="rounded-xl font-medium bg-red-100 text-red-700 py-2 px-6"
+              v-if="isEditing"
+              @click="handleRemove"
+            >
+              Remove
+            </button>
+            <button
+              class="rounded-xl font-medium bg-primary text-white py-2 px-6"
+              @click="handleAddToCart"
+            >
+              {{ isEditing ? "Update Cart" : "Add to Basket" }}
+            </button>
+          </div>
         </div>
       </div>
     </template>
@@ -127,17 +136,25 @@ const props = defineProps({
     type: Object,
     required: true,
   },
+  isEditing: {
+    type: Boolean,
+    default: false,
+  },
 });
 
-const localSelectedItem = ref({ ...props.selectedItem });
+const localSelectedItem = ref(JSON.parse(JSON.stringify(props.selectedItem)));
 
-const emit = defineEmits(["addToCart"]);
+const emit = defineEmits(["addToCart", "delete"]);
 
 const handleAddToCart = () => {
   emit("addToCart", {
     quantity: localSelectedItem.value.quantity ?? 1,
     item: localSelectedItem.value,
   });
+};
+
+const handleRemove = () => {
+  emit("delete");
 };
 
 const getProductTotal = () => {

@@ -1,5 +1,125 @@
 export const items = [
   {
+    name: "Wonton Mami",
+    category: "Noodle Soup",
+    image: "./items/compressed/wonton-mami.png",
+    description: null,
+    translation: {
+      cn: "炸雞",
+    },
+    price: 178,
+    min_transaction: null,
+    max_transaction: null,
+    modifiers: [],
+    variants: [],
+  },
+  {
+    name: "Taiwanese Braised Beef Mami",
+    category: "Noodle Soup",
+    image: "./items/compressed/braised-beef-mami.png",
+    description: null,
+    tags: ["BEST SELLER"],
+    translation: {
+      cn: "炸雞",
+    },
+    price: 198,
+    min_transaction: null,
+    max_transaction: null,
+    modifiers: [],
+    variants: [],
+  },
+  {
+    name: "Beef Wonton Mami",
+    category: "Noodle Soup",
+    image: "./items/compressed/beef-wonton-mami.png",
+    description: null,
+    tags: ["BEST SELLER"],
+    translation: {
+      cn: "炸雞",
+    },
+    price: 248,
+    min_transaction: null,
+    max_transaction: null,
+    modifiers: [],
+    variants: [],
+  },
+  {
+    name: "Beef Mami",
+    category: "Noodle Soup",
+    image: "./items/compressed/beef-mami.png",
+    description: null,
+    translation: {
+      cn: "炸雞",
+    },
+    price: 178,
+    min_transaction: null,
+    max_transaction: null,
+    modifiers: [],
+    variants: [],
+  },
+  {
+    name: "Wonton Soup",
+    category: "Noodle Soup",
+    image: "./items/compressed/wonton-soup.png",
+    description: null,
+    translation: {
+      cn: "炸雞",
+    },
+    price: 178,
+    min_transaction: null,
+    max_transaction: null,
+    modifiers: [],
+    variants: [],
+  },
+  {
+    name: "Century Egg Congee",
+    category: "Noodle Soup",
+    image: "./items/compressed/congee.png",
+    description: null,
+    tags: ["NEW"],
+    translation: {
+      cn: "炸雞",
+    },
+    price: null,
+    min_transaction: null,
+    max_transaction: null,
+    modifiers: [],
+    variants: [
+      {
+        name: "Century Egg Congee with Pork",
+        category: "Noodle Soup",
+        image: "./items/compressed/congee.png",
+        description: null,
+
+        translation: {
+          cn: "炸雞",
+        },
+        price: 178,
+        variants: [],
+        min_transaction: null,
+        max_transaction: null,
+        modifiers: [],
+      },
+
+      {
+        name: "Century Egg Congee with Beef",
+        category: "Noodle Soup",
+        image: "./items/compressed/congee.png",
+        description: null,
+
+        translation: {
+          cn: "炸雞",
+        },
+        price: 198,
+        variants: [],
+        min_transaction: null,
+        max_transaction: null,
+        modifiers: [],
+      },
+    ],
+  },
+
+  {
     name: "Boneless Fried Chicken",
     category: "Main Dish",
     image: "./items/compressed/6pc.png",
@@ -17,7 +137,8 @@ export const items = [
         name: "4PC Boneless Fried Chicken",
         category: "Main Dish",
         image: "./items/compressed/4pc.png",
-        description: "Crispy Boneless Fried Chicken brined overnight for maximum flavor, with your sauce of choice (or none, its goods anyways)",
+        description:
+          "Crispy Boneless Fried Chicken brined overnight for maximum flavor, or with your sauce of choice",
 
         translation: {
           cn: "炸雞",
@@ -29,7 +150,7 @@ export const items = [
         modifiers: [
           {
             name: "Sauce Flavor",
-            max_selected: 1,
+            max_selected: 2,
             items: [
               {
                 name: "Hao Bao Original",
@@ -244,7 +365,6 @@ export const items = [
       },
     ],
   },
-
   {
     name: "Szechuan Pork",
     category: "Main Dish",
@@ -413,126 +533,6 @@ export const items = [
   // PANCIT
 
   {
-    name: "Wonton Mami",
-    category: "Noodle Soup",
-    image: "./items/compressed/wonton-mami.png",
-    description: null,
-    translation: {
-      cn: "炸雞",
-    },
-    price: 178,
-    min_transaction: null,
-    max_transaction: null,
-    modifiers: [],
-    variants: [],
-  },
-  {
-    name: "Taiwanese Braised Beef Mami",
-    category: "Noodle Soup",
-    image: "./items/compressed/braised-beef-mami.png",
-    description: null,
-    tags: ["BEST SELLER"],
-    translation: {
-      cn: "炸雞",
-    },
-    price: 198,
-    min_transaction: null,
-    max_transaction: null,
-    modifiers: [],
-    variants: [],
-  },
-  {
-    name: "Beef Wonton Mami",
-    category: "Noodle Soup",
-    image: "./items/compressed/beef-wonton-mami.png",
-    description: null,
-    tags: ["BEST SELLER"],
-    translation: {
-      cn: "炸雞",
-    },
-    price: 248,
-    min_transaction: null,
-    max_transaction: null,
-    modifiers: [],
-    variants: [],
-  },
-  {
-    name: "Beef Mami",
-    category: "Noodle Soup",
-    image: "./items/compressed/beef-mami.png",
-    description: null,
-    translation: {
-      cn: "炸雞",
-    },
-    price: 178,
-    min_transaction: null,
-    max_transaction: null,
-    modifiers: [],
-    variants: [],
-  },
-  {
-    name: "Wonton Soup",
-    category: "Noodle Soup",
-    image: "./items/compressed/wonton-soup.png",
-    description: null,
-    translation: {
-      cn: "炸雞",
-    },
-    price: 178,
-    min_transaction: null,
-    max_transaction: null,
-    modifiers: [],
-    variants: [],
-  },
-  {
-    name: "Century Egg Congee",
-    category: "Noodle Soup",
-    image: "./items/compressed/congee.png",
-    description: null,
-    tags: ["NEW"],
-    translation: {
-      cn: "炸雞",
-    },
-    price: null,
-    min_transaction: null,
-    max_transaction: null,
-    modifiers: [],
-    variants: [
-      {
-        name: "Century Egg Congee with Pork",
-        category: "Noodle Soup",
-        image: "./items/compressed/congee.png",
-        description: null,
-
-        translation: {
-          cn: "炸雞",
-        },
-        price: 178,
-        variants: [],
-        min_transaction: null,
-        max_transaction: null,
-        modifiers: [],
-      },
-
-      {
-        name: "Century Egg Congee with Beef",
-        category: "Noodle Soup",
-        image: "./items/compressed/congee.png",
-        description: null,
-
-        translation: {
-          cn: "炸雞",
-        },
-        price: 198,
-        variants: [],
-        min_transaction: null,
-        max_transaction: null,
-        modifiers: [],
-      },
-    ],
-  },
-
-  {
     name: "Sharks Fin",
     category: "Dimsum",
     image: "./items/compressed/sharks-fin.png",
@@ -543,7 +543,36 @@ export const items = [
     price: 148,
     min_transaction: null,
     max_transaction: null,
-    modifiers: [],
+    modifiers: [
+      {
+        name: "Add Chilli Garlic",
+        max_selected: 1,
+        items: [
+          {
+            name: "Yes",
+            price: 0,
+          },
+          {
+            name: "Extra Chilli Garlic - 2oz",
+            price: 10,
+          },
+        ],
+      },
+      {
+        name: "Add-Ons",
+        max_selected: 1,
+        items: [
+          {
+            name: "Steamed Rice",
+            price: 28,
+          },
+          {
+            name: "Egg Fried Rice",
+            price: 48,
+          },
+        ],
+      },
+    ],
     variants: [],
   },
   {
@@ -626,11 +655,11 @@ export const items = [
     },
     modifiers: [
       {
-        name: "Add Chilli Garlic",
+        name: "Condiments",
         max_selected: 1,
         items: [
           {
-            name: "Yes",
+            name: "Chilli Garlic",
             price: 0,
           },
           {
