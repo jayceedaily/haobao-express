@@ -17,26 +17,20 @@ return new class extends Migration
             $table->id();
 
             $table->foreignId('transaction_id');
-            $table->foreignId('product_id');
+            $table->foreignId('parent_id');
+
+
+            $table->integer('price');
             $table->integer('quantity')->default(1);
+            $table->integer('total');
+
             $table->longText('note');
 
             // FK
             $table->foreign('transaction_id')->references('id')->on('transactions');
-            $table->foreign('product_id')->references('id')->on('products');
-
-            // Default Columns
-            $table->foreignId('created_by');
-            $table->foreign('created_by')->references('id')->on('users');
-
-            $table->foreignId('updated_by');
-            $table->foreign('updated_by')->references('id')->on('users');
-
-            $table->foreignId('deleted_by');
-            $table->foreign('deleted_by')->references('id')->on('users');
+            $table->foreign('parent_id')->references('id')->on('items');
 
             $table->timestamps();
-            $table->softDeletes();
         });
     }
 

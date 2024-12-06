@@ -13,14 +13,26 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('product_categories', function (Blueprint $table) {
+        Schema::create('items', function (Blueprint $table) {
             $table->id();
+
             $table->string('name', 255);
             $table->longText('description')->nullable();
+            $table->longText('image_url')->nullable();
+            $table->integer('cost')->default(0);     
+            $table->foreignId('category_id')->nullable();
+            $table->boolean('for_sale')->default(1);
+            $table->boolean('track_stocks')->default(0);
+            $table->integer('min_transaction_quantity')->nullable();     
+            $table->integer('max_transaction_quantity')->nullable();     
+
             $table->foreignId('parent_id')->nullable();
+            $table->foreignId('modifier_id')->nullable();
 
             // FK
-            $table->foreign('parent_id')->references('id')->on('product_categories');
+            $table->foreign('parent_id')->references('id')->on('items');
+            $table->foreign('category_id')->references('id')->on('categories');
+            $table->foreign('modifier_id')->references('id')->on('modifiers');
 
             // Default Columns
             $table->foreignId('created_by');
@@ -44,6 +56,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('product_categories');
+        Schema::dropIfExists('products');
     }
 };
